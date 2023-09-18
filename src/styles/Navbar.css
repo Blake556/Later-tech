@@ -1,0 +1,79 @@
+.Navbar {
+    border-bottom: .5px solid rgb(178, 178, 178);
+}
+
+.shipping-box {
+    background-color: black;
+    color: white;
+    padding: 4px 0;
+}
+
+.shipping {
+    font-weight: bold;
+}
+
+.nav-main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.link-box {
+    padding-right: 50px;
+}
+
+.link {
+    font-weight: bold;
+    position: relative; /* Required for pseudo-element positioning */
+    text-decoration: none; /* Remove default underline */
+    color: #333; /* Text color */
+    transition: color 0.3s, border-bottom 0.3s; /* Transition effect for color and border */
+    padding-bottom: 5px;
+}
+
+.link, a {
+    color: black;
+    text-decoration: none;
+}
+
+.logo-box {
+    font-weight: 500;
+    font-size: 2.4rem;
+}
+
+.logo {
+    height: 80px;
+}
+
+.sc {
+    padding-left: 40px;
+    font-size: 1.6rem;
+}
+
+
+
+.sc:hover {
+    color: gray;
+}
+
+
+
+
+  .link::before {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute; /* Position it absolutely relative to the parent */
+    bottom: 0; /* Align it to the bottom */
+    left: 0; /* Start from the left */
+    width: 0; /* Initially, it's invisible */
+    height: 2.5px; /* Height of the border */
+    background-color: #333; /* Border color */
+    transition: width 0.3s; /* Transition effect for width */
+  }
+  
+  .link:hover {
+    color: #000; /* Change text color on hover */
+  }
+  
+  .link:hover::before {
+    width: 100%; /* Make the border 100% width on hover */
+  }
+  
