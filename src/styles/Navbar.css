@@ -1,5 +1,6 @@
 .Navbar {
     border-bottom: .5px solid rgb(178, 178, 178);
+    width: auto;
 }
 
 .shipping-box {
@@ -15,6 +16,7 @@
 .nav-main {
     width: 90%;
     margin: 0 auto;
+    
 }
 
 .link-box {

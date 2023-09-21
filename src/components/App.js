@@ -6,6 +6,7 @@ import Footer from './Footer'
 import Home from './Home'
 import Shop from './Shop'
 import About from './About'
+import data from '../productData.js'
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Routes>
           <Route path="" element={ <Home  to="/Home"/>} />
           <Route path="/Home" element={<Home />} />
-          <Route path="/Shop" element={<Shop />} />
+          <Route path="/Shop" element={<Shop data={data} />} />
           <Route path="/About" element={<About />} />
           <Route path="/" element={<About />} />
           <Route path="/Cart" element={<About />} />

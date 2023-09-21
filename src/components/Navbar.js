@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom'
 import image from "../images/icon.png"
 
 function Navbar() {
-    // let img = "../images/laptop1.png"
+   
   return (
     <div className="Navbar ">
       <div className="shipping-box row text-center">

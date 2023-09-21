@@ -1,0 +1,7 @@
+.Product-box {
+    width: 360px;
+    height: 350px;
+    display: inline-block;
+    border-right: .5px solid rgb(178, 178, 178);
+    border-bottom: .5px solid rgb(178, 178, 178);
+}
