@@ -1,26 +1,89 @@
 import '../styles/Shop.css';
-import Product from './Product'
-// import data from './productData.js'
+import { Link } from 'react-router-dom';
+import titanium from '../images/Titanium.jpeg'
 
 
 function Shop(props) {
+  const { data } = props;
+  const iphone = data[0][0].img;
+  const samsung = data[1][0].img;
+  const access = data[2][0].img;
+  const Windows = data[3][0].img;
+  const Google = data[4][0].img;
+  
 
-  const { data } = props
 
   return (
-    <div className="App">
-         
-         { data.map((d) => {
-            return (
-              <Product 
-                image={d.img}
-                name={d.name}
-              />
-        )
-        })}
+    <div className="Shop">
+      <div className="row">
+        <div className="main-img-box">
+          <img src={titanium} className="shop-main-image" />
+        </div>
+          <div className="collection-box col-3">
+            <div className="shop-header">
+              <h3>Choose your <br /> collection</h3>
+            </div>
+          </div>
 
-    </div>
+          <Link to="/Apple" className="collection-box col-3">
+            <div className="collection-content">
+              <img className="collection-img" src={iphone}  />
+              <div className="shop-link-header-box">
+                <h4 className="shop-link-header">Apple</h4>
+              </div>
+            </div>
+          
+          </Link>
+
+          <Link to="/Samsung" className="collection-box col-3">
+            <div className="collection-content">
+              <img className="collection-img" src={samsung}  />
+              <div className="shop-link-header-box">
+                <h4 className="shop-link-header">Samsung</h4>
+              </div>
+            </div>
+          </Link>
+
+          <Link to="/Samsung" className="collection-box col-3">
+          <div className="collection-content">
+            <img className="collection-img" src={Google}  />
+            <div className="shop-link-header-box">
+              <h4 className="shop-link-header">Google</h4>
+            </div>
+          </div>
+        </Link>
+      </div>
+
+      <div className="row">
+        <Link to="/Samsung" className="collection-box col-3">
+          <div className="collection-content">
+            <img className="collection-img" src={Windows}  />
+            <div className="shop-link-header-box">
+              <h4 className="shop-link-header">Windows</h4>
+            </div>
+          </div>
+        </Link>
+
+        <Link to="/Accessories" className="collection-box col-3">
+            <div className="collection-content">
+              <img className="collection-img" src={access}  />
+              <div className="shop-link-header-box">
+                <h4 className="shop-link-header">Accessories</h4>
+              </div>
+            </div>
+          </Link>
+      
+        
+        <div className="help-box col-6">
+        <div className="d-flex justify-content-center">
+          <h3 className="help-header">Did you find what you were looking for?<br></br>Click here.</h3>
+          </div>
+        </div>
+      </div>
+
+   </div>
   );
 }
 
 export default Shop;
+

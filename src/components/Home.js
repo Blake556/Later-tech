@@ -1,5 +1,5 @@
 import '../styles/Home.css';
-import iphnoe from "../images/prodcuts/iPhone15.png" 
+//import iphnoe from "../images/prodcuts/iPhone15.png" 
 function Home() {
     return (
      <div className="Home">
