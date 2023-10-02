@@ -1,17 +1,17 @@
-import iPhone15ProMaxBlk from './images/Apple/iphone-15-pro-front.png'
+import iPhone15ProMaxBlk from './../images/Apple/iphone-15-pro-front.png'
 //import iPhoneCase from './images/Apple/iphone-15-finish-select-202309-6-7inch-black.png'
 
 
-import Galaxy23 from './images/Samsung/1.1.png'
-import GalaxyUltra from './images/Samsung/2.png'
+import Galaxy23 from './../images/Samsung/1.1.png'
+import GalaxyUltra from './../images/Samsung/2.png'
 
 
 
-import Access from './images/Access/AirPods-Pro-2---Front-Open_1.jpg'
+import Access from './../images/Access/AirPods-Pro-2---Front-Open_1.jpg'
 
-import Windows from './images/Xbox-Series-X (1).png'
+import Windows from './../images/Xbox-Series-X (1).png'
 
-import Google from './images/6514032_sd (1).png'
+import Google from './../images/6514032_sd (1).png'
 
 
 const data = [

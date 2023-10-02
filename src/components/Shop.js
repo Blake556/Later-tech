@@ -1,15 +1,16 @@
 import '../styles/Shop.css';
 import { Link } from 'react-router-dom';
-import titanium from '../images/Titanium.jpeg'
+import titanium from '../images/Headers/Titanium.jpeg'
 
 
 function Shop(props) {
-  const { data } = props;
-  const iphone = data[0][0].img;
-  const samsung = data[1][0].img;
-  const access = data[2][0].img;
-  const Windows = data[3][0].img;
-  const Google = data[4][0].img;
+  const { shopData } = props;
+  const iphone = shopData[0].img;
+  const samsung = shopData[1].img;
+  const access = shopData[2].img;
+  const Google =shopData[3].img;
+  const Windows = shopData[4].img;
+  
   
 
 
@@ -44,7 +45,7 @@ function Shop(props) {
             </div>
           </Link>
 
-          <Link to="/Samsung" className="collection-box col-3">
+          <Link to="/Google" className="collection-box col-3">
           <div className="collection-content">
             <img className="collection-img" src={Google}  />
             <div className="shop-link-header-box">
@@ -55,7 +56,7 @@ function Shop(props) {
       </div>
 
       <div className="row">
-        <Link to="/Samsung" className="collection-box col-3">
+        <Link to="/Windows" className="collection-box col-3">
           <div className="collection-content">
             <img className="collection-img" src={Windows}  />
             <div className="shop-link-header-box">

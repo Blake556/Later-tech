@@ -8,9 +8,19 @@ import Shop from './Shop'
 import About from './About'
 import Apple from './Apple';
 import Samsung from './Samsung';
+import Google from './Google';
+import Microsoft from './Microsoft';
 import Accessories from './Accessories';
-import data from '../productData.js'
-import appleData from '../appleData.js'
+import ProductPage from './ProductPage';
+// import data from '../data/productData.js'
+
+// IMPORTING STORE DATA FILES WITH ARRAY OF OBJECTS
+import shopData from '../data/shopData.js'
+import appleData from '../data/appleData.js'
+import samsungData from '../data/samsungData.js'
+import googleData from '../data/googleData.js'
+import microsoftData from '../data/microsoftData.js'
+import accessoriesData from '../data/accessoriesData.js'
 
 function App() {
   return (
@@ -21,11 +31,13 @@ function App() {
        
           <Route path="" element={ <Home  to="/Home"/>} />
           <Route path="/Home" element={<Home />} />
-          <Route path="/Shop" element={<Shop data={data} />} />
+          <Route path="/Shop" element={<Shop shopData={shopData} />} />
           <Route path="/Apple" element={<Apple appleData={appleData} />} />
-          <Route path="/Samsung" element={<Samsung data={data} />} />
-          <Route path="/Accessories" element={<Accessories data={data} />} />
-          
+          <Route path="/Samsung" element={<Samsung samsungData={samsungData} />} />
+          <Route path="/Google" element={<Google googleData={googleData} />} />
+          <Route path="/Microsoft" element={<Microsoft microsoftData={microsoftData} />} />
+          <Route path="/Accessories" element={<Accessories accessoriesData={accessoriesData} />} />
+          <Route path="/ProductPage" element={<ProductPage />} />
           <Route path="/About" element={<About />} />
           <Route path="/" element={<About />} />
           <Route path="/Cart" element={<About />} />

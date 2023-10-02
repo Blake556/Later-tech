@@ -5,7 +5,7 @@ import {
   faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
 import {Link} from 'react-router-dom'
-import image from "../images/icon.png"
+import image from "../images/Headers/icon.png"
 
 function Navbar() {
    

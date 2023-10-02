@@ -1,26 +1,27 @@
-import '../styles/Shop.css';
+
 import Product from './Product'
 
 
 
-function Samsung(props) {
+function Google(props) {
 
-  const { samsungData } = props
+  const { googleData } = props
 
   return (
-    <div className="Samsung">
-        
-         { samsungData.map((d) => {
+    <div className="Google">
+    <h1>Google</h1>
+{/*          
+         { data.map((d) => {
             return (
               <Product 
                 image={d.img}
                 name={d.name}
               />
         )
-        })}
+        })} */}
 
     </div>
   );
 }
 
-export default Samsung;
+export default Google;
