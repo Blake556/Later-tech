@@ -13,6 +13,9 @@ function Samsung(props) {
          { samsungData.map((d) => {
             return (
               <Product 
+                key={d.id}
+                id={d.id} 
+                category={d.category}
                 image={d.img}
                 name={d.name}
               />

@@ -18,6 +18,8 @@ import GalaxyTablet from './../images/Samsung/tablet-front.png'
 
 const samsungData = [
     {
+        id: 0,
+        category: 'samsung',
         img: Galaxy23,
         name: 'Samsung Galaxy s23+',
         color: 'Carbon black',
@@ -25,6 +27,8 @@ const samsungData = [
         price: '$49.99'
     },
     {
+        id: 1,
+        category: 'samsung',
         img: GalaxyUltra,
         name: 'Samsung Galaxy ultra',
         color: 'Black',
@@ -32,6 +36,8 @@ const samsungData = [
         price: '$49.99'
     },
     {
+        id: 2,
+        category: 'samsung',
         img: GalaxyZflip,
         name: 'Samsung Galaxy Z Flip',
         color: 'Black',
@@ -39,6 +45,8 @@ const samsungData = [
         price: '$49.99'
     },
     {
+        id: 3,
+        category: 'samsung',
         img: GalaxyFlip,
         name: 'Samsung Galaxy Flip',
         color: 'Black',
@@ -46,6 +54,8 @@ const samsungData = [
         price: '$49.99'
     },
     {
+        id: 4,
+        category: 'samsung',
         img: GalaxyTablet,
         name: 'Samsung Galaxy Tablet',
         color: 'Black',

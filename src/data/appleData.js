@@ -19,6 +19,7 @@ const Apple = [
     // },
     {
         id: 0,
+        category: 'apple',
         img: iPhone15ProMaxBlk,
         name: 'iPhone 15 Pro Max',
         color: 'Carbon black',
@@ -28,14 +29,16 @@ const Apple = [
     },
     {
         id: 1,
+        category: 'apple',
         img: iPhone15ProMaxBlu,
         name: 'iPhone 15 Pro Max',
         color: 'Carbon black',
-        description: 'Choose your device',
+        description: 'iPhone 15 Pro Max. Forged in titanium and featuring the groundbreaking A17 Pro chip, a customizable Action button, and the most powerful iPhone camera system ever.',
         price: '$49.99' 
     },
     {
         id: 2,
+        category: 'apple',
         img: iPhone15ProMaxNat,
         name: 'iPhone 15 Pro Max',
         color: 'Carbon black',
@@ -44,6 +47,7 @@ const Apple = [
     },
     {
         id: 3,
+        category: 'apple',
         img: iPhone15Blk,
         name: 'iPhone 15',
         color: 'Carbon black',
@@ -52,6 +56,7 @@ const Apple = [
     },
      {
         id: 4,
+        category: 'apple',
         img: iPhone,
         name: 'iPhone SE',
         color: 'Carbon black',
@@ -61,6 +66,7 @@ const Apple = [
     },
     {
         id: 5,
+        category: 'apple',
         img: iPadMini,
         name: 'iPad Mini',
         color: 'Carbon black',
@@ -70,6 +76,7 @@ const Apple = [
     },
     {
         id: 6,
+        category: 'apple',
         img: ipadBig,
         name: 'iPad Pro',
         color: 'Carbon black',
@@ -79,6 +86,7 @@ const Apple = [
     },
     {
         id: 7,
+        category: 'apple',
         img: macbook,
         name: 'Macbook Pro 14"',
         color: 'Carbon black',
@@ -88,6 +96,7 @@ const Apple = [
     },
     {
         id: 8,
+        category: 'apple',
         img: imac,
         name: 'iMac 24"',
         color: 'Carbon black',
@@ -97,6 +106,7 @@ const Apple = [
     },
     {
         id: 9,
+        category: 'apple',
         img: macTower,
         name: 'Mac Pro',
         color: 'Carbon black',

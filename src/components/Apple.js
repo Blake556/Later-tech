@@ -7,14 +7,6 @@ import { useState } from "react";
 function Apple(props) {
 
     const { appleData } = props
-    //console.log(data)
-
-    const [product, setProduct] = useState()
-    console.log(product)
-
-    function handleClick(event) {
-        setProduct(event.target.value)
-    }
 
    
   return (
@@ -23,9 +15,12 @@ function Apple(props) {
             return (
               <Product 
                 key={d.id}
+                id={d.id} 
+                category={d.category}
                 image={d.img}
                 name={d.name}
-                onClick={handleClick}
+                color={d.color}
+                description={d.description}
               />
         )
         })}

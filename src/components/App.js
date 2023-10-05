@@ -37,7 +37,7 @@ function App() {
           <Route path="/Google" element={<Google googleData={googleData} />} />
           <Route path="/Microsoft" element={<Microsoft microsoftData={microsoftData} />} />
           <Route path="/Accessories" element={<Accessories accessoriesData={accessoriesData} />} />
-          <Route path="/ProductPage" element={<ProductPage />} />
+          <Route path="/ProductPage/:id/:category" element={<ProductPage />} />
           <Route path="/About" element={<About />} />
           <Route path="/" element={<About />} />
           <Route path="/Cart" element={<About />} />
