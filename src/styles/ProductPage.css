@@ -65,3 +65,8 @@
     border-radius: 15px;
     padding: 12px 24px;
 }
+
+
+.product-page-img :hover {
+    transform: scale(1.1); /* Increase the scale for zoom effect */
+  }

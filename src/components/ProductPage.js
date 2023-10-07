@@ -1,7 +1,7 @@
 import '../styles/ProductPage.css';
 //import img from './../images/Apple/iphoneBlue-15-pro-front.png';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 
 import appleData from '../data/appleData';
@@ -11,8 +11,21 @@ import microsoftData from '../data/microsoftData';
 import accessoriesData from '../data/accessoriesData';
 
 function ProductPage() {
+
   const { id, category } = useParams();
   const location = useLocation();
+
+  const [isHovered, setIsHovered] = useState(true);
+
+  function handleMouseOver() {
+    setIsHovered(false)
+  }
+
+  function handleMouseOut() {
+    setIsHovered(true)
+  }
+
+
 
   let productData;
 
@@ -40,8 +53,11 @@ function ProductPage() {
   // Find the product by 'id' in the selected category's data
   const product = productData.find((product) => product.id === Number(id));
 
-  console.log(product.id, product.img, product.name);
+  console.log(appleData[0].imgSd)
+  console.log(product.id, product.img, product.imgSd, product.name);
+  console.log(product.imgSd)
 
+  const imgSource = isHovered ? product.img : product.imgSd;
 
   if (!product) {
     // Handle the case when the product with the given id is not found
@@ -52,8 +68,9 @@ function ProductPage() {
   return (
     <div className="Product-Page-container">
       <div className="row d-flex justify-content-center product-page-row">
-        <div className="product-page-img-box d-flex justify-content-center col-6">
-          <img src={product.img} className="product-page-img" alt="Product" />
+        <div onMouseOver={handleMouseOver}
+        onMouseOut={handleMouseOut} className="product-page-img-box d-flex justify-content-center col-6">
+          <img src={imgSource} className="product-page-img" alt="Product" />
         </div>
         <div className="product-page-datails-box col-6">
           <div className="all-details product-page-name-box">

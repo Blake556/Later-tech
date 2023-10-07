@@ -18,6 +18,7 @@ function Apple(props) {
                 id={d.id} 
                 category={d.category}
                 image={d.img}
+                imageSd={d.imgSd}
                 name={d.name}
                 color={d.color}
                 description={d.description}

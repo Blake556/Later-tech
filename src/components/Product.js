@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 function Product(props) {
-    const { id, category, image, name, color, description } = props;
+    const { id, category, image, imageSd, name, color, description } = props;
     const navigate = useNavigate();
 
     
 
     function handleClick() {
-        navigate(`/ProductPage/${id}/${category}`, { state: { product: { category, id, image, name, } } });
+        navigate(`/ProductPage/${id}/${category}`, { state: { product: { category, id, image, imageSd, name, description } } });
         //console.log(id, image, name)
     }
 
