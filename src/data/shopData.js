@@ -1,9 +1,9 @@
 
 import iPhone15ProMaxBlk from './../images/Apple/iphone-15-pro-front.png'
 import Galaxy23 from './../images/Samsung/s23-front.png'
-import Access from './../images/Access/AirPods-Pro-2---Front-Open_1.jpg'
-import Windows from './../images/Microsoft/Xbox-Series-X (1).png'
-import Google from './../images/Google/6514032_sd (1).png'
+import Access from './../images/Access/apcase1.png'
+import Windows from './../images/Microsoft/xbox1.png'
+import Google from './../images/Google/fitbit1.png'
 
 
 const shopData = [

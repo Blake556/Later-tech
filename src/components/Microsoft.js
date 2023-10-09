@@ -9,17 +9,20 @@ function Microsoft(props) {
 
   return (
     <div className="Microsoft">
-    <h1>Google</h1>
-{/*          
-         { data.map((d) => {
+        { microsoftData.map((d) => {
             return (
               <Product 
-                image={d.img}
+                key={d.id}
+                id={d.id} 
+                category={d.category}
+                image1={d.img1}
+                image2={d.img2}
                 name={d.name}
+                color={d.color}
+                description={d.description}
               />
         )
-        })} */}
-
+        })}
     </div>
   );
 }

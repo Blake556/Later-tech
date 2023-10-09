@@ -5,21 +5,24 @@ import Product from './Product'
 
 function Accessories(props) {
 
-  const { data } = props
+  const { accessoriesData } = props
 
   return (
     <div className="Accessories">
-    <h1>You do work right?</h1>
-{/*          
-         { data.map((d) => {
+      { accessoriesData.map((d) => {
             return (
               <Product 
-                image={d.img}
+                key={d.id}
+                id={d.id} 
+                category={d.category}
+                image1={d.img1}
+                image2={d.img2}
                 name={d.name}
+                color={d.color}
+                description={d.description}
               />
         )
-        })} */}
-
+        })}
     </div>
   );
 }

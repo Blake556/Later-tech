@@ -57,7 +57,7 @@ function ProductPage() {
   console.log(product.id, product.img, product.imgSd, product.name);
   console.log(product.imgSd)
 
-  const imgSource = isHovered ? product.img : product.imgSd;
+  const imgSource = isHovered ? product.img1 : product.img2;
 
   if (!product) {
     // Handle the case when the product with the given id is not found
@@ -77,14 +77,14 @@ function ProductPage() {
             <h2>{product.name}</h2>
           </div>
           <div className="all-details inner-details product-page-color-box row">
-            <h6 className="product-page-color col-6">Color - Titanium Blue</h6>
-            <div className="col-6 color"></div>
+            <h6 className="product-page-color col-6">Color - {product.color}</h6>
+            {/* <div className="col-6 color"></div> */}
           </div>
           <div className="all-details inner-details product-page-storage-box">
-            <h6 className="col-6">Storage - 512GB</h6>
+            <h6 className="col-6">Storage - ${product.storage}</h6>
           </div>
           <div className="all-details inner-details product-page-price-box">
-            <h6 className="">$1,399.00</h6>
+            <h6 className="">{product.price}</h6>
           </div>
           <div className="all-details product-page-desc-box">
             <h6>{product.description}

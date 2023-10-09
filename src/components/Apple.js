@@ -10,15 +10,15 @@ function Apple(props) {
 
    
   return (
-    <div className="Body Apple">
+    <div className="Apple">
          { appleData.map((d) => {
             return (
               <Product 
                 key={d.id}
                 id={d.id} 
                 category={d.category}
-                image={d.img}
-                imageSd={d.imgSd}
+                image1={d.img1}
+                image2={d.img2}
                 name={d.name}
                 color={d.color}
                 description={d.description}

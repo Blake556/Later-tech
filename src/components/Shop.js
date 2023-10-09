@@ -56,11 +56,11 @@ function Shop(props) {
       </div>
 
       <div className="row">
-        <Link to="/Windows" className="collection-box col-3">
+        <Link to="/Microsoft" className="collection-box col-3">
           <div className="collection-content">
             <img className="collection-img" src={Windows}  />
             <div className="shop-link-header-box">
-              <h4 className="shop-link-header">Windows</h4>
+              <h4 className="shop-link-header">Microsoft</h4>
             </div>
           </div>
         </Link>
