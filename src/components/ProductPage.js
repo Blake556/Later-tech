@@ -70,7 +70,7 @@ function ProductPage() {
       <div className="row d-flex justify-content-center product-page-row">
         <div onMouseOver={handleMouseOver}
         onMouseOut={handleMouseOut} className="product-page-img-box d-flex justify-content-center col-6">
-          <img src={imgSource} className="product-page-img" alt="Product" />
+          <img src={imgSource} height='800px' className="product-page-img" alt="Product" />
         </div>
         <div className="product-page-datails-box col-6">
           <div className="all-details product-page-name-box">
@@ -81,7 +81,7 @@ function ProductPage() {
             {/* <div className="col-6 color"></div> */}
           </div>
           <div className="all-details inner-details product-page-storage-box">
-            <h6 className="col-6">Storage - ${product.storage}</h6>
+            <h6 className="col-6">Storage - {product.storage}</h6>
           </div>
           <div className="all-details inner-details product-page-price-box">
             <h6 className="">{product.price}</h6>
