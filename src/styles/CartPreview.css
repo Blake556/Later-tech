@@ -1,0 +1,106 @@
+.PopUpCart {
+    position: fixed;
+    top: 0;
+    right: 0; /* Start with the element outside the viewport */
+    width: 30%;
+    height: 100vh;
+    background-color: rgb(203, 203, 203);
+    padding: 15px;
+    transition: right 0.5s; /* Change the duration to 0.5 seconds */
+  }
+
+/* Rest of your styles remain the same */
+
+/* Add a class to animate the CartPreview when it's triggered */
+.cart-preview-show {
+    right: 0; /* Move the element to the right to slide it in */
+}
+
+
+
+ 
+  .cart-preview-header {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .close-cart-preview {
+    background-color: rgb(203, 203, 203);
+    border: 0;
+    font-weight: 700;
+
+  }
+
+  .cart-preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+.cart-prev-shipping-box {
+    border-top: 3px solid black;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.cart-prev-item-box {
+    margin-top: 5px;
+}
+
+.cart-prev-description-box  {
+    line-height: .8;
+   margin-top: 22px;
+  
+}
+
+.quanity-selector {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    font-weight: 600;
+    
+    padding: 2px 12px;
+    
+}
+
+.left {
+    border: 1px solid black;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.right {
+    border: 1px solid black;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.cart-prev-remove {
+    margin-top: 22px;
+}
+  
+
+
+
+
+
+  .cart-preview {
+    position: relative;
+    height: 100%; /* Ensure the cart-preview takes the full height of its parent */
+  }
+
+  .cart-preview-button {
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 55%;
+    width: 100%;
+    height: 50px;
+  }
+  
+
+
+  .quanity-selector:hover {
+    cursor: pointer;
+  }
+  

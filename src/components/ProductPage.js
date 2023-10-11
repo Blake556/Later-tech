@@ -1,6 +1,7 @@
 import '../styles/ProductPage.css';
 //import img from './../images/Apple/iphoneBlue-15-pro-front.png';
 
+import CartPreview from './CartPreview'
 import React, { useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 
@@ -16,6 +17,8 @@ function ProductPage() {
   const location = useLocation();
 
   const [isHovered, setIsHovered] = useState(true);
+
+  const [cartPreview, setCartPreview ] = useState(false)
 
   function handleMouseOver() {
     setIsHovered(false)
@@ -93,8 +96,9 @@ function ProductPage() {
             </h6>
           </div>
           <div className="all-details product-page-buy-box">
-            <button className="btn btn-dark product-page-buy-btn">Buy</button>
+            <button className="btn btn-dark product-page-buy-btn" onClick={() => setCartPreview(true)} >Buy</button>
           </div>
+          <CartPreview trigger={cartPreview} setTrigger={setCartPreview}/> 
         </div>
       </div>
     </div>

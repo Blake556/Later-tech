@@ -12,6 +12,7 @@ import Google from './Google';
 import Microsoft from './Microsoft';
 import Accessories from './Accessories';
 import ProductPage from './ProductPage';
+//import CartPreview from './CartPreview'
 // import data from '../data/productData.js'
 
 // IMPORTING STORE DATA FILES WITH ARRAY OF OBJECTS
@@ -38,6 +39,7 @@ function App() {
           <Route path="/Microsoft" element={<Microsoft microsoftData={microsoftData} />} />
           <Route path="/Accessories" element={<Accessories accessoriesData={accessoriesData} />} />
           <Route path="/ProductPage/:id/:category" element={<ProductPage />} />
+          {/* <Route path="/Cart" element={<CartPreview />} /> */}
           <Route path="/About" element={<About />} />
           <Route path="/" element={<About />} />
           <Route path="/Cart" element={<About />} />
