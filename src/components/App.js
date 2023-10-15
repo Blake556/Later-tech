@@ -6,6 +6,7 @@ import Footer from './Footer'
 import Home from './Home'
 import Shop from './Shop'
 import About from './About'
+import Cart from './Cart'
 import Apple from './Apple';
 import Samsung from './Samsung';
 import Google from './Google';
@@ -42,8 +43,8 @@ function App() {
           {/* <Route path="/Cart" element={<CartPreview />} /> */}
           <Route path="/About" element={<About />} />
           <Route path="/" element={<About />} />
-          <Route path="/Cart" element={<About />} />
-        
+          <Route path="/Cart" element={<Cart />} />
+
         </Routes>
         <Footer />
       </div>

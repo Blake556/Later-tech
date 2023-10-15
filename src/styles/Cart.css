@@ -1,0 +1,203 @@
+.Cart {
+    min-height: 100vh;
+    margin: 0 0 0 10%;
+   
+}
+
+.cart-row {
+    min-height: 100vh;
+}
+
+.divider {
+    border-right: .5px solid rgb(178, 178, 178);
+    margin: 0;
+    padding: 0;
+}
+
+.shipping-row {
+    border-bottom: .5px solid rgb(178, 178, 178);
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+.shipping-details {
+    padding-bottom: 100px;
+}
+
+
+
+
+
+.checkbox-container {
+    display: flex;
+    align-items: center; /* Vertically center the checkbox and label */
+    gap: 10px; /* Adjust the gap between the checkbox and label */
+    margin: 30px 0 60px;
+  }
+  
+  /* You can style the label and checkbox as needed */
+  label {
+    /* Your label styles here */
+  }
+  
+  input[type="checkbox"] {
+    /* Your checkbox styles here */
+  }
+
+
+
+
+
+.pay-now-btn {
+    /* background-color: blueviolet;
+    color: white; */
+    height: 50px;
+    
+}
+
+.inner-col {
+    padding: 50px;
+}
+
+
+
+
+
+
+/* CART ITEM SECTION  */
+.order-items-box {
+    background-color: rgb(237, 237, 237);
+    padding: 50px 0px 100px 35px;
+}
+
+
+.inner-cart-detail-row {
+    /* padding: 50px 50px 20px 50px; */
+    width: 60%;
+    margin-bottom: 15px;
+}
+
+
+.cart-item-details {
+    margin-top: 24px;
+    line-height: .1;
+}
+
+.cart-item-img {
+    border: .5px solid rgb(178, 178, 178);
+    border-radius: 10px;
+}
+p.cart-item-price  {
+    margin-top: 13px;
+}
+
+p.cart-item-color  {
+    font-size: 12px;
+}
+
+
+
+
+
+.total-cart-detail-row {
+    width: 60%;
+    margin-top: 50px;
+}
+
+.cart-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .cart-detail-value {
+    text-align: right;
+  }
+  
+
+
+/* ******************* Order Conf styles  ****************** */
+
+.order-row h5 {
+    margin-bottom: 15px;
+}
+.order-details-header {
+    height: 50px;
+}
+
+
+.order-con-map {
+    border: .5px solid rgb(178, 178, 178);
+    border-radius: 10px;
+    width: 575px;
+    min-height: 400px;
+    padding: 0;
+    margin: 0;
+}
+
+
+img.order-con-map-img {
+    height: 300px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 0;
+}
+
+.order-conf {
+    line-height: .1;
+}
+
+
+.order-con-details-box {
+    border: .5px solid rgb(178, 178, 178);
+    border-radius: 10px;
+    width: 575px;
+    margin: 25px 0 0 0;
+    padding: 15px;
+
+}
+
+.order-con-sub-header {
+    font-weight: 700;
+    font-size: 15px;
+    margin: 0px 0 10px;
+}
+
+.amex-logo {
+    font-size: 1.8rem;
+    color: rgb(29, 127, 255);
+    margin-right: 10px;
+}
+
+.sub-header-sr {
+    margin-top: 20px;
+}
+
+.order-con-details {
+    font-size: 14px;
+}
+
+.order-con-details-box p  { 
+    padding: 0;
+    margin: 0;
+}
+
+
+.continue-shop-row {
+    width: 575px;
+    
+    padding: 0;
+    margin: 0;
+}
+
+
+button.continue-shop-btn {
+    position: relative;
+    left: 10px;
+    border-radius: 5px;
+    padding: 15px;
+    float: right;
+    margin-top: 30px;
+}
+

@@ -4,7 +4,7 @@
     right: 0; /* Start with the element outside the viewport */
     width: 30%;
     height: 100vh;
-    background-color: rgb(203, 203, 203);
+    background-color:white;
     padding: 15px;
     transition: right 0.5s; /* Change the duration to 0.5 seconds */
   }
@@ -25,7 +25,7 @@
   }
 
   .close-cart-preview {
-    background-color: rgb(203, 203, 203);
+    background-color: white;
     border: 0;
     font-weight: 700;
 
