@@ -6,8 +6,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import {Link} from 'react-router-dom'
 import image from "../images/Headers/icon.png"
+import CartPreview from './CartPreview'
 
-function Navbar() {
+function Navbar(props) {
    
   return (
     <div className="Navbar ">
@@ -33,10 +34,11 @@ function Navbar() {
         </div>
         <div className="sc-box col-3 d-flex justify-content-end align-items-center">
           <Link to="/Cart"> <FontAwesomeIcon icon={faMagnifyingGlass} className="sc"/> </Link>
-          <Link to="/Cart"> <FontAwesomeIcon icon={faCartShopping} className="sc"/> </Link>
+        
+         <FontAwesomeIcon onClick={() => props.setCartPreview(true)} icon={faCartShopping} className="sc"/>
         </div>
       </div>
-    
+      <CartPreview trigger={props.cartPreview} setTrigger={props.setCartPreview}/> 
     </div>
   );
 }

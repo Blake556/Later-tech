@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import '../styles/CartPreview.css';
-import iPhone from './../images/Apple/iphonebig-15-pro-front.png'
+import iPhone from './../images/Apple/iphonebig-15-pro-front.png' 
 
 
 function CartPreview(props) {
@@ -58,7 +58,7 @@ function CartPreview(props) {
            
             <Link to="/Cart" className="">
               <div className="cart-preview">
-                <button className="btn cart-preview-button">Cart</button>
+                <button onClick={() => props.setTrigger(false)} className="btn cart-preview-button">Cart</button>
               </div>
             </Link>
             {/* {props.childern } */}

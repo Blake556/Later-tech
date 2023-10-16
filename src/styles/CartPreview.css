@@ -14,6 +14,7 @@
 /* Add a class to animate the CartPreview when it's triggered */
 .cart-preview-show {
     right: 0; /* Move the element to the right to slide it in */
+    z-index: 2
 }
 
 

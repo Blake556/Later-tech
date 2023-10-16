@@ -1,5 +1,6 @@
 import '../styles/App.css';
-import React from 'react'
+import React, { useState } from 'react'
+
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import Navbar from './Navbar'
 import Footer from './Footer'
@@ -25,10 +26,11 @@ import microsoftData from '../data/microsoftData.js'
 import accessoriesData from '../data/accessoriesData.js'
 
 function App() {
+  const [cartPreview, setCartPreview ] = useState(false)
   return (
     <Router>
       <div className="App">
-        <Navbar />
+        <Navbar cartPreview={cartPreview} setCartPreview={setCartPreview}/>
         <Routes>
        
           <Route path="" element={ <Home  to="/Home"/>} />
@@ -39,7 +41,7 @@ function App() {
           <Route path="/Google" element={<Google googleData={googleData} />} />
           <Route path="/Microsoft" element={<Microsoft microsoftData={microsoftData} />} />
           <Route path="/Accessories" element={<Accessories accessoriesData={accessoriesData} />} />
-          <Route path="/ProductPage/:id/:category" element={<ProductPage />} />
+          <Route path="/ProductPage/:id/:category" element={<ProductPage cartPreview={cartPreview} setCartPreview={setCartPreview}/>} />
           {/* <Route path="/Cart" element={<CartPreview />} /> */}
           <Route path="/About" element={<About />} />
           <Route path="/" element={<About />} />

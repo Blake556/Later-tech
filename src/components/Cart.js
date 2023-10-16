@@ -1,4 +1,5 @@
 import "../styles/Cart.css";
+import { useState } from "react";
 import { Link } from 'react-router-dom';
 import iPhone from "./../images/Apple/iphonebig-15-pro-front.png";
 import location from "./../images/location.png";
@@ -9,15 +10,21 @@ import { faCcAmex } from '@fortawesome/free-brands-svg-icons';
 
 function Cart() {
 
+  const [btnClicked, setBtnClicked] = useState(false)
+
+  function handleClick() {
+    setBtnClicked(true)
+  }
+
   return (
     <div className="Cart ">
       <div className="row cart-row">
         <div className="col-6 divider custom-col shipping-details">
           <div className="inner-col">
 
-
-
-            {/* <div className="row shipping-row">
+          { !btnClicked ? (
+            <>
+           <div className="row shipping-row">
               <h6>Shop pay</h6>
               <p>Jsmith@gmail.com</p>
             </div>
@@ -40,12 +47,12 @@ function Cart() {
             </div>
 
             <div className="row">
-              <button className="btn btn-primary pay-now-btn">Pay now</button>
-            </div> */}
+              <button onClick={handleClick} className="btn btn-primary pay-now-btn">Pay now</button>
+            </div> 
+            </>
 
-
-
-
+          ) : (
+            <>
 
 
             <div className="row order-row">
@@ -117,8 +124,8 @@ function Cart() {
                 </Link>
              
             </div>
-
-
+            </>
+          )}
           </div>
         </div>
 

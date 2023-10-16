@@ -11,14 +11,14 @@ import googleData from '../data/googleData';
 import microsoftData from '../data/microsoftData';
 import accessoriesData from '../data/accessoriesData';
 
-function ProductPage() {
+function ProductPage(props) {
 
   const { id, category } = useParams();
   const location = useLocation();
 
   const [isHovered, setIsHovered] = useState(true);
 
-  const [cartPreview, setCartPreview ] = useState(false)
+  
 
   function handleMouseOver() {
     setIsHovered(false)
@@ -96,9 +96,9 @@ function ProductPage() {
             </h6>
           </div>
           <div className="all-details product-page-buy-box">
-            <button className="btn btn-dark product-page-buy-btn" onClick={() => setCartPreview(true)} >Buy</button>
+            <button className="btn btn-dark product-page-buy-btn" onClick={() => props.setCartPreview(true)} >Buy</button>
           </div>
-          <CartPreview trigger={cartPreview} setTrigger={setCartPreview}/> 
+          <CartPreview trigger={props.cartPreview} setTrigger={props.setCartPreview}/> 
         </div>
       </div>
     </div>
