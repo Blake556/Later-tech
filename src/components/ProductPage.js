@@ -16,9 +16,16 @@ function ProductPage(props) {
   const { id, category } = useParams();
   const location = useLocation();
 
+  // *****************   CART POPUP STATE   ********************* //
   const [isHovered, setIsHovered] = useState(true);
 
+  // thought i would neen btnclick state in productpage but itseems i do not
+  //const [btnClicked, setBtnClicked] = useState(false)
   
+
+
+
+// *****************  START HANDLE CART POPUP FUNCTION   ********************* //
 
   function handleMouseOver() {
     setIsHovered(false)
@@ -27,6 +34,26 @@ function ProductPage(props) {
   function handleMouseOut() {
     setIsHovered(true)
   }
+
+// *****************  END OF HANDLE CART POPUP FUNCTION  ********************* //
+
+
+  function handleAddToCart(index) {
+
+    const productData = {
+      
+      id: product.id,
+      img1: product.img1,
+      name: product.name,
+      color: product.color,
+      price: product.price,
+    };
+
+    console.log(productData)
+    props.addToCart(productData);
+    //setBtnClicked(true)
+  }
+  
 
 
 
@@ -56,9 +83,13 @@ function ProductPage(props) {
   // Find the product by 'id' in the selected category's data
   const product = productData.find((product) => product.id === Number(id));
 
-  console.log(appleData[0].imgSd)
-  console.log(product.id, product.img, product.imgSd, product.name);
-  console.log(product.imgSd)
+
+  //console.log(appleData[0].imgSd)
+  //console.log(product.id, product.img1, product.imgSd, product.name);
+  
+
+
+
 
   const imgSource = isHovered ? product.img1 : product.img2;
 
@@ -66,6 +97,7 @@ function ProductPage(props) {
     // Handle the case when the product with the given id is not found
     return <div>Product not found</div>;
   }
+
 
 
   return (
@@ -90,13 +122,17 @@ function ProductPage(props) {
             <h6 className="">{product.price}</h6>
           </div>
           <div className="all-details product-page-desc-box">
-            <h6>{product.description}
-              {/* iPhone 15 Pro Max. Forged in titanium and featuring the groundbreaking A17 Pro chip, a customizable
-              Action button, and the most powerful iPhone camera system ever. */}
-            </h6>
+            <h6>{product.description}</h6>
           </div>
           <div className="all-details product-page-buy-box">
-            <button className="btn btn-dark product-page-buy-btn" onClick={() => props.setCartPreview(true)} >Buy</button>
+          <button
+            className="btn btn-dark product-page-buy-btn"
+            onClick={() => {
+              props.setCartPreview(true); // Handle the cart preview toggle
+              handleAddToCart(); // Handle adding to the cart
+          }}>
+            Buy
+          </button>
           </div>
           <CartPreview trigger={props.cartPreview} setTrigger={props.setCartPreview}/> 
         </div>

@@ -35,8 +35,7 @@ function CartPreview(props) {
           </div>
         </div>
 
-
-        <div className="cart-prev-item-box row">
+        {/* <div className="cart-prev-item-box row">
         
           <div className="cart-prev-img col-4">
             <img src={iPhone} height='150px' />
@@ -45,16 +44,15 @@ function CartPreview(props) {
             <h6 className="cart-prev-description">iPhone 15 pro max</h6>
             <p className="cart-prev-description">Black Titanium</p>
             <p className="cart-prev-description">$1,399.00</p>
-          {/* </div> */}
-          {/* <div className="quanity-selector"> */}
-            <span className="quanity-selector left">-</span>
-            <span className="quanity-selector middle">1</span>
-            <span className="quanity-selector right">+</span>
+     
+          <span className="quanity-selector left">-</span>
+          <span className="quanity-selector middle">1</span>
+          <span className="quanity-selector right">+</span>
           </div>
           <div className="cart-prev-remove col-1">
             <span>X</span>
           </div>
-        </div>
+        </div> */}
            
             <Link to="/Cart" className="">
               <div className="cart-preview">

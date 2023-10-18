@@ -27,6 +27,32 @@ import accessoriesData from '../data/accessoriesData.js'
 
 function App() {
   const [cartPreview, setCartPreview ] = useState(false)
+
+  const [shoppingCart, setShoppingCart] = useState([])
+  console.log(shoppingCart)
+
+  function addToCart(productData) {
+    const itemExistInCart = shoppingCart.find((item) => item.id === productData.id)
+
+    if(!shoppingCart.includes(itemExistInCart)) {
+      shoppingCart.push(productData)
+      //const productIndex = {...productData, key: index }
+    } else {
+      console.log('item already in cart')
+      //alert('Product already added to cart')
+    }
+    setShoppingCart([...shoppingCart])
+  }
+
+  // function addToCart(productData) {
+  //   // You may want to add a unique identifier or quantity to the product data
+  //   // before adding it to the cart.
+  //   const updatedShoppingCart = [...shoppingCart, productData];
+  //   setShoppingCart(updatedShoppingCart);
+  // }
+  
+
+
   return (
     <Router>
       <div className="App">
@@ -41,7 +67,13 @@ function App() {
           <Route path="/Google" element={<Google googleData={googleData} />} />
           <Route path="/Microsoft" element={<Microsoft microsoftData={microsoftData} />} />
           <Route path="/Accessories" element={<Accessories accessoriesData={accessoriesData} />} />
-          <Route path="/ProductPage/:id/:category" element={<ProductPage cartPreview={cartPreview} setCartPreview={setCartPreview}/>} />
+          <Route path="/ProductPage/:id/:category" element={
+          <ProductPage 
+          cartPreview={cartPreview} 
+          setCartPreview={setCartPreview} 
+          addToCart={addToCart} 
+          />
+          }/>
           {/* <Route path="/Cart" element={<CartPreview />} /> */}
           <Route path="/About" element={<About />} />
           <Route path="/" element={<About />} />
