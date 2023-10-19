@@ -13,7 +13,10 @@ function Cart() {
   const [btnClicked, setBtnClicked] = useState(false)
 
   function handleClick() {
-    setBtnClicked(true)
+    setTimeout(() => {
+      setBtnClicked(true)
+    }, "1500");
+   
   }
 
   return (

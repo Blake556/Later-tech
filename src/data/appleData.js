@@ -39,7 +39,7 @@ const apple = [
         color: 'Black Titanium',
         description: 'iPhone 15 Pro Max. Forged in titanium and featuring the groundbreaking A17 Pro chip, a customizable Action button, and the most powerful iPhone camera system ever.',
         storage: '512GB',
-        price: '1,399.00'
+        price: '$1,399.00'
     
     },
     {
@@ -51,7 +51,7 @@ const apple = [
         color: 'Blue Titanium',
         description: 'iPhone 15 Pro Max. Forged in titanium and featuring the groundbreaking A17 Pro chip, a customizable Action button, and the most powerful iPhone camera system ever.',
         storage: '512GB',
-        price: '1,399.00' 
+        price: '$1,399.00' 
     },
     {
         id: 2,
@@ -62,7 +62,7 @@ const apple = [
         color: 'Natural Titanium',
         description: 'iPhone 15 Pro Max. Forged in titanium and featuring the groundbreaking A17 Pro chip, a customizable Action button, and the most powerful iPhone camera system ever.',
         storage: '256GB',
-        price: '1,199.00' 
+        price: '$1,199.00' 
     },
     {
         id: 3,
@@ -108,7 +108,7 @@ const apple = [
         color: 'Space Gray',
         description: 'M2 chip. The M2 chip is the next generation of Apple silicon, with an 8‑core CPU that delivers up to 15 percent faster performance and a 10‑core GPU that provides up to 35 percent faster graphics performance.',
         storage: '2TB',
-        price: '2,099.00'
+        price: '$2,099.00'
     
     },
     {
@@ -120,7 +120,7 @@ const apple = [
         color: 'Space Gray',
         description: 'Supercharged by M2 Pro or M2 Max, MacBook Pro takes its power and efficiency further than ever. It delivers exceptional performance whether it’s plugged in or not, and now has even longer battery life.',
         storage: '2TB',
-        price: '2,389.00' 
+        price: '$2,389.00' 
     },
     {
         id: 8,

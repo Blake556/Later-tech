@@ -11,7 +11,7 @@ import xboxs2 from './../images/Microsoft/xboxs2.png'
 
 const microsoft = [
     {
-        id: 0,
+        id: 22,
         category: 'microsoft',
         img1: surface1,
         img2: surface2,
@@ -22,7 +22,7 @@ const microsoft = [
         price: '$1,799.99'
     },
     {
-        id: 1,
+        id: 23,
         category: 'microsoft',
         img1: surfaces1,
         img2: surfaces2,
@@ -33,7 +33,7 @@ const microsoft = [
         price: '$979.00'
     },
     {
-        id: 2,
+        id: 24,
         category: 'microsoft',
         img1: surfacet1,
         img2: surfacet2,
@@ -45,7 +45,7 @@ const microsoft = [
     
     },
     {
-        id: 3,
+        id: 25,
         category: 'microsoft',
         img1: xbox1,
         img2: xbox2,
@@ -56,7 +56,7 @@ const microsoft = [
         price: '$499.99'
     },
     {
-        id: 4,
+        id: 26,
         category: 'microsoft',
         img1: xboxs1,
         img2: xboxs2,

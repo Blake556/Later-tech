@@ -2,10 +2,10 @@
     position: fixed;
     top: 0;
     right: 0; /* Start with the element outside the viewport */
-    width: 30%;
+    width: 35%;
     height: 100vh;
     background-color:white;
-    padding: 15px;
+    padding: 20px;
     transition: right 0.5s; /* Change the duration to 0.5 seconds */
   }
 
@@ -21,6 +21,9 @@
 
  
   .cart-preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     margin-bottom: 20px;
   }
@@ -32,12 +35,6 @@
 
   }
 
-  .cart-preview-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
 
 .cart-prev-shipping-box {
     border-top: 3px solid black;
@@ -45,15 +42,40 @@
     text-align: center;
 }
 
-.cart-prev-item-box {
-    margin-top: 5px;
-}
-
-.cart-prev-description-box  {
-    line-height: .8;
-   margin-top: 22px;
+.cart-prev-all-items-box {
+  margin: 15px 0 50px;
+  padding: 20px 0 60px 30px;
+  /* margin-bottom: 20px; */
+  max-height: 75%; 
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Disable horizontal scrolling */
+  /* background-color: bisque; */
   
 }
+
+/* .cart-prev-item-box {
+    margin-top: 5px;
+    
+    overflow: auto;
+   
+} */
+
+.cart-prev-description-box  {
+  line-height: .8;
+  margin-top: 22px;
+  
+  
+}
+
+h6.cart-prev-description  {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cart-prev-color {
+    font-size: 12px;
+}
+
 
 .quanity-selector {
     border-top: 1px solid black;
@@ -76,29 +98,43 @@
     border-bottom-right-radius: 15px;
 }
 
-.cart-prev-remove {
+.cart-prev-remove-box {
     margin-top: 22px;
+    padding-left: 0;
+    margin-left: 0;
 }
+
+.cart-prev-remove {
+  padding-left: 0;
+  margin-left: 0;
+}
+
   
 
 
 
 
 
-  .cart-preview {
-    position: relative;
-    height: 100%; /* Ensure the cart-preview takes the full height of its parent */
-  }
-
-  .cart-preview-button {
-    background-color: black;
-    color: white;
-    position: absolute;
-    bottom: 55%;
-    width: 100%;
-    height: 50px;
-  }
+.cart-preview {
+  position: absolute;
+  bottom: 10px; /* Stick it to the bottom */
+  width: 100%;
+  right: 0;
+  margin: 20px 0;
+  display: flex; /* Create a flex container */
+  justify-content: center; /* Center horizontally */
   
+}
+
+.cart-preview-button {
+  background-color: black;
+  color: white;
+  width: 90%; /* Set a specific width */
+  height: 50px;
+  
+ 
+  margin: auto; /* Center both horizontally and vertically */
+}
 
 
   .quanity-selector:hover {

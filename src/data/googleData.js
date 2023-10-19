@@ -16,7 +16,7 @@ import camera2 from './../images/Google/camera2.png'
 
 const google = [
     {
-        id: 0,
+        id: 17,
         category: 'google',
         img1: fitbit1,
         img2: fitbit2,
@@ -27,7 +27,7 @@ const google = [
         price: '$229.95'
     },
     {
-        id: 1,
+        id: 18,
         category: 'google',
         img1: pixel1,
         img2: pixel2,
@@ -39,7 +39,7 @@ const google = [
     
     },
     {
-        id: 2,
+        id: 19,
         category: 'google',
         img1: nest1,
         img2: nest2,
@@ -51,7 +51,7 @@ const google = [
     
     },
     {
-        id: 3,
+        id: 20,
         category: 'google',
         img1: camera1,
         img2: camera2,
@@ -63,7 +63,7 @@ const google = [
     
     },
     {
-        id: 4,
+        id: 21,
         category: 'google',
         img1: nesth1,
         img2: nesth2,

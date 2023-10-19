@@ -41,7 +41,6 @@ function ProductPage(props) {
   function handleAddToCart(index) {
 
     const productData = {
-      
       id: product.id,
       img1: product.img1,
       name: product.name,
@@ -49,9 +48,13 @@ function ProductPage(props) {
       price: product.price,
     };
 
-    console.log(productData)
+    // console.log(productData)
     props.addToCart(productData);
     //setBtnClicked(true)
+  }
+
+  function passRemoveCartF(item) {
+   
   }
   
 
@@ -130,11 +133,17 @@ function ProductPage(props) {
             onClick={() => {
               props.setCartPreview(true); // Handle the cart preview toggle
               handleAddToCart(); // Handle adding to the cart
+             
           }}>
             Buy
           </button>
           </div>
-          <CartPreview trigger={props.cartPreview} setTrigger={props.setCartPreview}/> 
+          <CartPreview 
+            trigger={props.cartPreview} 
+            setTrigger={props.setCartPreview}
+            shoppingCart={props.shoppingCart}
+            removeFromCart={props.removeFromCart}
+            /> 
         </div>
       </div>
     </div>

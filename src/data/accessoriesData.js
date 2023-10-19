@@ -22,7 +22,7 @@ import band2 from './../images/Access/band2.png'
 
 const accessories = [
     {
-        id: 0,
+        id: 27,
         category: 'accessories',
         img1: apcase1,
         img2: apcase2,
@@ -33,7 +33,7 @@ const accessories = [
         price: '$49.00'
     },
     {
-        id: 1,
+        id: 28,
         category: 'accessories',
         img1: icase1,
         img2: icase2,
@@ -44,7 +44,7 @@ const accessories = [
         price: '$49.00'
     },
     {
-        id: 2,
+        id: 29,
         category: 'accessories',
         img1: ap1,
         img2: ap2,
@@ -55,7 +55,7 @@ const accessories = [
         price: '$249.00'
     },
     {
-        id: 3,
+        id: 30,
         category: 'accessories',
         img1: charger1,
         img2: charger2,
@@ -66,7 +66,7 @@ const accessories = [
         price: '$39.99'
     },
     {
-        id: 4,
+        id: 31,
         category: 'accessories',
         img1: magsafe1,
         img2: magsafe2,
@@ -77,7 +77,7 @@ const accessories = [
         price: '$39.00'
     },
     {
-        id: 5,
+        id: 32,
         category: 'accessories',
         img1: sbuds1,
         img2: sbuds2,
@@ -88,7 +88,7 @@ const accessories = [
         price: '$189.99'
     },
     {
-        id: 6,
+        id: 33,
         category: 'accessories',
         img1: controller1,
         img2: controller2,
@@ -99,7 +99,7 @@ const accessories = [
         price: '$64.99'
     },
     {
-        id: 7,
+        id: 34,
         category: 'accessories',
         img1: band1,
         img2: band2,

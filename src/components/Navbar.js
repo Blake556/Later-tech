@@ -38,7 +38,12 @@ function Navbar(props) {
          <FontAwesomeIcon onClick={() => props.setCartPreview(true)} icon={faCartShopping} className="sc"/>
         </div>
       </div>
-      <CartPreview trigger={props.cartPreview} setTrigger={props.setCartPreview}/> 
+      <CartPreview 
+        trigger={props.cartPreview} 
+        setTrigger={props.setCartPreview}
+        shoppingCart={props.shoppingCart}
+        removeFromCart={props.removeFromCart}
+        /> 
     </div>
   );
 }

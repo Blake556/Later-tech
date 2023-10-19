@@ -15,7 +15,7 @@ import monitor2 from './../images/Samsung/monitor2.png'
 
 const samsungData = [
     {
-        id: 0,
+        id: 10,
         category: 'samsung',
         img1: Galaxy231,
         img2: Galaxy232,
@@ -26,7 +26,7 @@ const samsungData = [
         price: '$999.99'
     },
     {
-        id: 1,
+        id: 11,
         category: 'samsung',
         img1: GalaxyUltra1,
         img2: GalaxyUltra2,
@@ -37,7 +37,7 @@ const samsungData = [
         price: '$1,199.99'
     },
     {
-        id: 2,
+        id: 12,
         category: 'samsung',
         img1: GalaxyZflip1,
         img2: GalaxyZflip2,
@@ -48,7 +48,7 @@ const samsungData = [
         price: '$1,019.99'
     },
     {
-        id: 3,
+        id: 13,
         category: 'samsung',
         img1: GalaxyFlip1,
         img2: GalaxyFlip2,
@@ -59,7 +59,7 @@ const samsungData = [
         price: '$1,859.99'
     },
     {
-        id: 4,
+        id: 14,
         category: 'samsung',
         img1: GalaxyTablet1,
         img2: GalaxyTablet2,
@@ -70,7 +70,7 @@ const samsungData = [
         price: '$1,199.99'
     },
     {
-        id: 5,
+        id: 15,
         category: 'samsung',
         img1: tv1,
         img2: tv2,
@@ -81,7 +81,7 @@ const samsungData = [
         price: '$1,899.99'
     },
     {
-        id: 6,
+        id: 16,
         category: 'samsung',
         img1: monitor1,
         img2: monitor2,

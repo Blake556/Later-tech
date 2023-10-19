@@ -7,6 +7,7 @@ import Footer from './Footer'
 import Home from './Home'
 import Shop from './Shop'
 import About from './About'
+import CartPreview from './CartPreview'
 import Cart from './Cart'
 import Apple from './Apple';
 import Samsung from './Samsung';
@@ -14,7 +15,7 @@ import Google from './Google';
 import Microsoft from './Microsoft';
 import Accessories from './Accessories';
 import ProductPage from './ProductPage';
-//import CartPreview from './CartPreview'
+
 // import data from '../data/productData.js'
 
 // IMPORTING STORE DATA FILES WITH ARRAY OF OBJECTS
@@ -29,7 +30,7 @@ function App() {
   const [cartPreview, setCartPreview ] = useState(false)
 
   const [shoppingCart, setShoppingCart] = useState([])
-  console.log(shoppingCart)
+  // console.log(shoppingCart)
 
   function addToCart(productData) {
     const itemExistInCart = shoppingCart.find((item) => item.id === productData.id)
@@ -44,6 +45,13 @@ function App() {
     setShoppingCart([...shoppingCart])
   }
 
+  function removeFromCart(productData) {
+    const itemExistInCart = shoppingCart.find((item) => item.id === productData.id)
+    if(itemExistInCart) {
+      setShoppingCart(shoppingCart.filter((item) => item.id !== productData.id))
+    }
+  }
+
   // function addToCart(productData) {
   //   // You may want to add a unique identifier or quantity to the product data
   //   // before adding it to the cart.
@@ -56,7 +64,12 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar cartPreview={cartPreview} setCartPreview={setCartPreview}/>
+        <Navbar 
+          cartPreview={cartPreview} 
+          setCartPreview={setCartPreview} 
+          shoppingCart={shoppingCart}
+          removeFromCart={removeFromCart} 
+        />
         <Routes>
        
           <Route path="" element={ <Home  to="/Home"/>} />
@@ -72,12 +85,14 @@ function App() {
           cartPreview={cartPreview} 
           setCartPreview={setCartPreview} 
           addToCart={addToCart} 
+          shoppingCart={shoppingCart}
+          removeFromCart={removeFromCart}
           />
           }/>
-          {/* <Route path="/Cart" element={<CartPreview />} /> */}
+          {/* <Route path="/CartPreview" element={<CartPreview shoppingCart={shoppingCart} removeFromCart={removeFromCart} />} /> */}
           <Route path="/About" element={<About />} />
           <Route path="/" element={<About />} />
-          <Route path="/Cart" element={<Cart />} />
+          <Route path="/Cart" element={<Cart shoppingCart={shoppingCart} />} />
 
         </Routes>
         <Footer />
