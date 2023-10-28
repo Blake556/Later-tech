@@ -11,7 +11,7 @@
 .product-page-img-box  {
     background-color: rgb(237, 237, 237);
     width: 700px;
-   
+    z-index: 1;
     border-radius: 20px;
     margin-right: 65px;
 }

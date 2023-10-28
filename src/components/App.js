@@ -1,5 +1,5 @@
 import '../styles/App.css';
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
 
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import Navbar from './Navbar'
@@ -28,9 +28,10 @@ import accessoriesData from '../data/accessoriesData.js'
 
 function App() {
   const [cartPreview, setCartPreview ] = useState(false)
-
+  //console.log(cartPreview)
   const [shoppingCart, setShoppingCart] = useState([])
-  // console.log(shoppingCart)
+  const [total, cartTotal] = useState()
+  //console.log(shoppingCart)
 
   function addToCart(productData) {
     const itemExistInCart = shoppingCart.find((item) => item.id === productData.id)
@@ -52,18 +53,62 @@ function App() {
     }
   }
 
-  // function addToCart(productData) {
-  //   // You may want to add a unique identifier or quantity to the product data
-  //   // before adding it to the cart.
-  //   const updatedShoppingCart = [...shoppingCart, productData];
-  //   setShoppingCart(updatedShoppingCart);
-  // }
-  
+  function increaseQuanity(productData) {
+
+    const itemExistInCart = shoppingCart.find((item) => item.id === productData.id)
+    if(itemExistInCart) {
+      setShoppingCart(shoppingCart.map((currentItem) => 
+      currentItem.id === productData.id && productData.qty < 10
+      ? {...itemExistInCart, qty: itemExistInCart.qty + 1 } : currentItem
+      )
+      );
+    }
+  }
+
+
+
+
+function decreaseQuanity(productData) {
+  const itemExistInCart = shoppingCart.find((item) => item.id === productData.id)
+
+  if(itemExistInCart) {
+    setShoppingCart(shoppingCart.map((currentItem) => 
+     currentItem.id === productData.id && productData.qty > 1 
+     ? {...itemExistInCart, qty: itemExistInCart.qty - 1 } : currentItem 
+     )
+     );
+  }
+}
+
+function purchaseCompleted() {
+    setShoppingCart(shoppingCart.filter((currentItem) => currentItem.length ))
+}
+
+
+
+const pricesAsString = shoppingCart.map((x) => x.price);
+const pricesAsNumbers = pricesAsString.map((x) => parseFloat(x.replace(/[$,]/g, '')));
+const itemQuantity = shoppingCart.map((x) => x.qty)
+const totalItemCost = shoppingCart.map((item, index) => itemQuantity[index] * pricesAsNumbers[index]);
+
+const cartTotalCost = shoppingCart.length ? totalItemCost.reduce((accum, current) => accum + current) : 0
+const cartPlusTax = cartTotalCost * 1.075;
+const cartTaxOnly = Number((cartPlusTax - cartTotalCost).toFixed(2));
+console.log(typeof tax)
+
+function formatNumberWithCommas(number) {
+  return number ? number.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") : '';
+}
+
+const totalCost = formatNumberWithCommas(cartTotalCost) || 0
+const totalTax = formatNumberWithCommas(cartTaxOnly) || 0
+const grandTotal = formatNumberWithCommas(cartPlusTax) || 0
 
 
   return (
     <Router>
-      <div className="App">
+<div className="App" style={{ backgroundColor: cartPreview ? 'rgba(0, 0, 0, .8)' : '' }}>
+
         <Navbar 
           cartPreview={cartPreview} 
           setCartPreview={setCartPreview} 
@@ -74,6 +119,7 @@ function App() {
        
           <Route path="" element={ <Home  to="/Home"/>} />
           <Route path="/Home" element={<Home />} />
+          <Route path="/About" element={<About />} />
           <Route path="/Shop" element={<Shop shopData={shopData} />} />
           <Route path="/Apple" element={<Apple appleData={appleData} />} />
           <Route path="/Samsung" element={<Samsung samsungData={samsungData} />} />
@@ -81,18 +127,25 @@ function App() {
           <Route path="/Microsoft" element={<Microsoft microsoftData={microsoftData} />} />
           <Route path="/Accessories" element={<Accessories accessoriesData={accessoriesData} />} />
           <Route path="/ProductPage/:id/:category" element={
-          <ProductPage 
-          cartPreview={cartPreview} 
-          setCartPreview={setCartPreview} 
-          addToCart={addToCart} 
-          shoppingCart={shoppingCart}
-          removeFromCart={removeFromCart}
-          />
-          }/>
-          {/* <Route path="/CartPreview" element={<CartPreview shoppingCart={shoppingCart} removeFromCart={removeFromCart} />} /> */}
-          <Route path="/About" element={<About />} />
-          <Route path="/" element={<About />} />
-          <Route path="/Cart" element={<Cart shoppingCart={shoppingCart} />} />
+            <ProductPage 
+              cartPreview={cartPreview} 
+              setCartPreview={setCartPreview} 
+              addToCart={addToCart} 
+              shoppingCart={shoppingCart}
+              removeFromCart={removeFromCart}
+              increaseQuanity={increaseQuanity}
+              decreaseQuanity={decreaseQuanity}
+              totalCost={totalCost}
+            />}/>
+          <Route path="/Cart" element={
+            <Cart 
+              shoppingCart={shoppingCart}
+              addToCart={addToCart}
+              totalCost={totalCost}
+              totalTax={totalTax}
+              grandTotal={grandTotal}
+              purchaseCompleted={purchaseCompleted}
+          />}/>
 
         </Routes>
         <Footer />
@@ -102,3 +155,29 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+// ******* DRY code both calculations and converting to sring ******
+// const totalCost = (shoppingCart.length
+//   ? totalItemCost.reduce((accum, current) => accum + current)
+//   : 0).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+//   console.log(typeof totalCost )
+
+
+// *****************  ACTIVATE CART PREV ON BUY / CART BUTTON  *****************
+  // function handleDocumentClick(event) {
+  //   // Check if the cartPreview is open and if the click event did not originate from the cart
+  //   if (cartPreview && !event.target.classList.contains('activate-cp')) {
+  //     setCartPreview(false);
+  //   }  
+  // }
+  // useEffect(() => {
+  //   document.addEventListener('click', handleDocumentClick);
+
+  //   return () => {
+  //     document.removeEventListener('click', handleDocumentClick);
+  //   };
+  // }, [cartPreview]);

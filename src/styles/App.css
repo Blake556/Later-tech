@@ -2,11 +2,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
- 
+  
 }
 
 .body {
   min-height: 100vh;
+ 
 }
 
 .App {
@@ -14,4 +15,5 @@
   width: 100%;
   overflow: hidden;
   min-width: 1500px;
+ 
 }

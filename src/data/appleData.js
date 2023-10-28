@@ -131,7 +131,7 @@ const apple = [
         color: 'Silver',
         description: 'Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 8-core GPU, and 16-core Neural Engine. 8GB unified memory. 512GB SSD storage. Two Thunderbolt / USB 4 ports. Two USB 3 ports',
         storage: '512GB',
-        price: '$1,599.00'
+        price: '1,599.00'
     
     },
     {

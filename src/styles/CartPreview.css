@@ -44,7 +44,7 @@
 
 .cart-prev-all-items-box {
   margin: 15px 0 50px;
-  padding: 20px 0 60px 30px;
+  padding: 20px 0 60px 0px;
   /* margin-bottom: 20px; */
   max-height: 75%; 
   overflow-y: auto; /* Enable vertical scrolling */
@@ -68,7 +68,12 @@
 }
 
 h6.cart-prev-description  {
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cart-pre-price {
+  font-size: 13px;
   font-weight: 700;
 }
 
@@ -81,7 +86,7 @@ h6.cart-prev-description  {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     font-weight: 600;
-    
+    background-color: white;
     padding: 2px 12px;
     
 }
@@ -90,12 +95,16 @@ h6.cart-prev-description  {
     border: 1px solid black;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
+    height: 25px;
+    padding-top: 3px;
 }
 
 .right {
     border: 1px solid black;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    height: 25px;
+    padding-top: 3px;
 }
 
 .cart-prev-remove-box {
@@ -115,23 +124,44 @@ h6.cart-prev-description  {
 
 
 
-.cart-preview {
+.cart-preview-bottom-box {
   position: absolute;
   bottom: 10px; /* Stick it to the bottom */
-  width: 100%;
-  right: 0;
-  margin: 20px 0;
-  display: flex; /* Create a flex container */
-  justify-content: center; /* Center horizontally */
+  width: 95%;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.total-box {
+  padding-bottom: 10px;
+  padding-left: 10px;
   
 }
 
-.cart-preview-button {
+.total-box span {
+  font-weight: 700;
+}
+
+.total-box h5 {
+  padding-left: 5px;
+}
+
+.cart-btn-box {
+  right: 20px;
+  /* margin: 20px 0; */
+  display: flex; /* Create a flex container */
+  justify-content: center; /* Center horizontally */
+}
+
+.cart-btn {
+  position: relative;
+  right: 8px;
   background-color: black;
   color: white;
-  width: 90%; /* Set a specific width */
+  width: 96%; /* Set a specific width */
   height: 50px;
-  
+  text-align: center;
  
   margin: auto; /* Center both horizontally and vertically */
 }
@@ -141,3 +171,7 @@ h6.cart-prev-description  {
     cursor: pointer;
   }
   
+
+  .cart-prev-remove-box:hover {
+    cursor: pointer;
+  }

@@ -83,12 +83,22 @@
     line-height: .1;
 }
 
-.cart-item-img {
+.cart-inner-box-img {
     border: .5px solid rgb(178, 178, 178);
     border-radius: 10px;
+    background-color: white;
+    width: 75px;
 }
+
+.cart-item-img {
+   
+   
+}
+
+
 p.cart-item-price  {
     margin-top: 13px;
+    font-weight: 700;
 }
 
 p.cart-item-color  {
@@ -113,6 +123,10 @@ p.cart-item-color  {
   
   .cart-detail-value {
     text-align: right;
+  }
+
+  .cart-detail h5 {
+    font-weight: 600;
   }
   
 
@@ -201,3 +215,12 @@ button.continue-shop-btn {
     margin-top: 30px;
 }
 
+
+
+
+
+
+
+.cart-item-img-box {
+
+}

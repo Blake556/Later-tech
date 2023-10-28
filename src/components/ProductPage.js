@@ -21,8 +21,9 @@ function ProductPage(props) {
 
   // thought i would neen btnclick state in productpage but itseems i do not
   //const [btnClicked, setBtnClicked] = useState(false)
-  
+  // console.log(props.formattedCartTotalCost)
 
+  // const totalCost = props.calculateCartTotalCost(props.shoppingCart);
 
 
 // *****************  START HANDLE CART POPUP FUNCTION   ********************* //
@@ -42,6 +43,7 @@ function ProductPage(props) {
 
     const productData = {
       id: product.id,
+      qty: 1,
       img1: product.img1,
       name: product.name,
       color: product.color,
@@ -129,7 +131,7 @@ function ProductPage(props) {
           </div>
           <div className="all-details product-page-buy-box">
           <button
-            className="btn btn-dark product-page-buy-btn"
+            className="btn btn-dark product-page-buy-btn activate-cp"
             onClick={() => {
               props.setCartPreview(true); // Handle the cart preview toggle
               handleAddToCart(); // Handle adding to the cart
@@ -143,6 +145,9 @@ function ProductPage(props) {
             setTrigger={props.setCartPreview}
             shoppingCart={props.shoppingCart}
             removeFromCart={props.removeFromCart}
+            increaseQuanity={props.increaseQuanity}
+            decreaseQuanity={props.decreaseQuanity}
+            totalCost={props.totalCost}
             /> 
         </div>
       </div>

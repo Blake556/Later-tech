@@ -8,7 +8,11 @@ import { faCcAmex } from '@fortawesome/free-brands-svg-icons';
 
 
 
-function Cart() {
+function Cart(props) {
+  console.log(props.shoppingCart)
+
+//   const total = new URLSearchParams(props.location.search).get('total');
+// console.log(total)
 
   const [btnClicked, setBtnClicked] = useState(false)
 
@@ -18,6 +22,20 @@ function Cart() {
     }, "1500");
    
   }
+
+  function truncateString(str, maxLength) {
+    if (str.length <= maxLength) {
+      return str;
+    }
+    return str.slice(0, maxLength) + '';
+  }
+
+
+
+    // const cartPlusTax = cartTotalCost * 1.075;
+
+
+  // console.log(props.formattedCartTotalCost)
 
   return (
     <div className="Cart ">
@@ -123,7 +141,7 @@ function Cart() {
             <div className="row continue-shop-row">
               
                 <Link to="/Shop" className="">
-                  <button className="btn btn-dark continue-shop-btn">Continue shopping</button>
+                  <button onClick={() => props.purchaseCompleted() } className="btn btn-dark continue-shop-btn">Continue shopping</button>
                 </Link>
              
             </div>
@@ -133,40 +151,33 @@ function Cart() {
         </div>
 
         <div className="col-6 order-items-box custom-col">
-          <div className="row inner-cart-detail-row">
-            <div className="col-3 cart-item-img-box">
-              <img className="cart-item-img" src={iPhone} height="80px" />
-            </div>
-            <div className="col-6 cart-item-details-box">
-              <h6 className="cart-item-details">iPhone 15 Pro Max</h6>
-              <p className="cart-item-details cart-item-color">
-                Black Titanium
-              </p>
-            </div>
-            <div className="col-3 cart-item-price-box">
-              <p className="cart-item-price">$1,399.00</p>
-            </div>
-          </div>
+        {props.shoppingCart ? props.shoppingCart.map((item) => (
 
+     
           <div className="row inner-cart-detail-row">
             <div className="col-3 cart-item-img-box">
-              <img className="cart-item-img" src={iPhone} height="80px" />
+            <div className="cart-inner-box-img d-flex justify-content-center">
+              <img className="cart-item-img" src={item.img1} height="80px" />
+              </div>
             </div>
             <div className="col-6 cart-item-details-box">
-              <h6 className="cart-item-details">iPhone 15 Pro Max</h6>
+              <h6 className="cart-item-details">{truncateString(item.name, 18)}</h6>
               <p className="cart-item-details cart-item-color">
-                Black Titanium
+                {item.color}
               </p>
             </div>
-            <div className="col-3 cart-item-price-box">
-              <p className="cart-item-price">$1,399.00</p>
+            <div className="col-3 cart-item-price-box d-flex justify-content-end">
+              <p className="cart-item-price">{item.price}</p>
             </div>
           </div>
+          )) : ''}
+         
+   
 
           <div className="row total-cart-detail-row">
             <div className="cart-detail">
               <h6>Subtotal</h6>
-              <span className="cart-detail-value">$1,399.00</span>
+              <span className="cart-detail-value">${props.totalCost}</span>
             </div>
             <div className="cart-detail">
               <h6>Shipping</h6>
@@ -174,11 +185,11 @@ function Cart() {
             </div>
             <div className="cart-detail">
               <h6>Tax</h6>
-              <span className="cart-detail-value">$115.00</span>
+              <span className="cart-detail-value">${props.totalTax}</span>
             </div>
             <div className="cart-detail">
-              <h5>Total</h5>
-              <span className="cart-detail-value">$1,514.00</span>
+              <h5 className="">Total</h5>
+              <h5 className="cart-detail-value">${props.grandTotal}</h5>
             </div>
           </div>
         </div>
