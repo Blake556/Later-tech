@@ -2,18 +2,35 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  
-}
-
-.body {
-  min-height: 100vh;
+   /* this is the line that is cuasing a gaop fixed one problem started another */
  
 }
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Ensure that content doesn't exceed viewport height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Make sure your content fills the viewport */
+#app {
+  min-height: 100%;
+}
+
+/* .body {
+  min-height: 100vh;
+ 
+} */
 
 .App {
   min-height: 100vh;
   width: 100%;
   overflow: hidden;
   min-width: 1500px;
- 
+  overflow-x: hidden;
 }

@@ -155,6 +155,9 @@ function Cart(props) {
 
      
           <div className="row inner-cart-detail-row">
+          <div className="show-quanity-box">
+          <div className="show-quanity">{item.qty}</div>
+          </div>
             <div className="col-3 cart-item-img-box">
             <div className="cart-inner-box-img d-flex justify-content-center">
               <img className="cart-item-img" src={item.img1} height="80px" />

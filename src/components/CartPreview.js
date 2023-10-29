@@ -20,7 +20,7 @@ function CartPreview(props) {
       </div>
       <div className="cart-prev-all-items-box">
         {!itemsInCart || itemsInCart.length === 0 ? (
-          <p>No items in cart</p>
+          <p className='cart-empty-msg'>Your cart is empty!</p>
         ) : (
           itemsInCart.map((item) => (
             <div className="cart-prev-item-box row">

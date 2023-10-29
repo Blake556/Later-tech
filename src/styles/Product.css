@@ -1,19 +1,21 @@
 
 
 
-.Product-box { 
+/* .Product-box { 
     width: 360px;
-    height: 350px;
+    height: 400px;
     display: inline-block;
     border-right: .5px solid rgb(178, 178, 178);
     border-bottom: .5px solid rgb(178, 178, 178);
     text-align: center;
+    padding: 0;
+    margin: 0;
 } 
 
 img.product-img  {
     
     height: 250px;
-}
+} */
 
 
 
@@ -22,14 +24,17 @@ img.product-img  {
 
 
 .Product-box {
-    width: 360px;
+    min-width: 360px;
+    max-width: auto;
     height: 350px;
     display: inline-block;
     border-right: .5px solid rgb(178, 178, 178);
     border-bottom: .5px solid rgb(178, 178, 178);
     text-align: center;
-    overflow: hidden; /* Hide overflow to prevent content from shifting on hover */
+
+
     position: relative; /* Add relative positioning to .Product-box */
+    
   }
   
   .Product-box img.product-img {

@@ -58,7 +58,7 @@ function App() {
     const itemExistInCart = shoppingCart.find((item) => item.id === productData.id)
     if(itemExistInCart) {
       setShoppingCart(shoppingCart.map((currentItem) => 
-      currentItem.id === productData.id && productData.qty < 10
+      currentItem.id === productData.id && productData.qty < 9
       ? {...itemExistInCart, qty: itemExistInCart.qty + 1 } : currentItem
       )
       );
@@ -107,7 +107,7 @@ const grandTotal = formatNumberWithCommas(cartPlusTax) || 0
 
   return (
     <Router>
-<div className="App" style={{ backgroundColor: cartPreview ? 'rgba(0, 0, 0, .8)' : '' }}>
+<div className="App" style={{  backgroundColor: cartPreview ? 'rgba(0, 0, 0, .8)' : '' }}>
 
         <Navbar 
           cartPreview={cartPreview} 

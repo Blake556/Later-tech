@@ -108,6 +108,7 @@ function ProductPage(props) {
   return (
     <div className="Product-Page-container">
       <div className="row d-flex justify-content-center product-page-row">
+        
         <div onMouseOver={handleMouseOver}
         onMouseOut={handleMouseOut} className="product-page-img-box d-flex justify-content-center col-6">
           <img src={imgSource} height='800px' className="product-page-img" alt="Product" />
