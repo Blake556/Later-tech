@@ -15,18 +15,15 @@ function Product(props) {
     }
 
     return (
-      
-        <Link to={`/ProductPage/${id}/${category}`} onClick={handleClick} className="Product col-4 category">
-          
-            <div className="Product-box ">
+        <Link to={`/ProductPage/${id}/${category}`} onClick={handleClick} className="category">
+            
+            <div className="container Product-box col-3">
                 <img src={image1} className="product-img" alt="Product" />
                 <div className="shop-header">
                 <h5>{name}</h5>
                 </div>
             </div>
-           
         </Link>
-     
     );
 }
 

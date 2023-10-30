@@ -7,25 +7,23 @@
 }
 
 body {
-  min-height: 100vh;
   overflow-x: hidden;
-}
+} 
 
-/* Ensure that content doesn't exceed viewport height */
+ 
 html, body {
   height: 100%;
   margin: 0;
 }
 
-/* Make sure your content fills the viewport */
 #app {
   min-height: 100%;
 }
 
-/* .body {
+.body {
   min-height: 100vh;
  
-} */
+} 
 
 .App {
   min-height: 100vh;

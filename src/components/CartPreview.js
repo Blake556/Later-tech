@@ -6,6 +6,7 @@ import iPhone from './../images/Apple/iphonebig-15-pro-front.png';
 function CartPreview(props) {
   console.log(props.formattedCartTotalCost);
   const itemsInCart = props.shoppingCart;
+  const cost = props.totalCost
 
   return props.trigger ? (
     <div className={`PopUpCart ${props.trigger ? 'cart-preview-show' : ''}`}>
@@ -51,7 +52,7 @@ function CartPreview(props) {
           <div className="cart-preview-bottom-box">
             <div className="total-box d-flex align-items-end">
               <span className="total">Total:</span>
-              <h5 className="mb-0">${props.totalCost}</h5>
+              <h5 className="mb-0">${cost}</h5>
             </div>
             <Link to="/Cart">
               <div className="cart-btn-box">

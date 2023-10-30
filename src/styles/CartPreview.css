@@ -2,7 +2,8 @@
     position: fixed;
     top: 0;
     right: 0; /* Start with the element outside the viewport */
-    width: 35%;
+    /* width: 35%; */
+    width: 500px;
     height: 100vh;
     background-color:white;
     padding: 20px;
@@ -19,7 +20,7 @@
 
 
  
-  .cart-preview-header {
+  .cart-preview-header { 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -78,6 +79,7 @@
 h6.cart-prev-description  {
   font-size: 15px;
   font-weight: 700;
+  
 }
 
 .cart-pre-price {
@@ -95,6 +97,7 @@ h6.cart-prev-description  {
     border-bottom: 1px solid black;
     font-weight: 600;
     background-color: white;
+    height: 25px;
     padding: 2px 12px;
     
 }
@@ -183,3 +186,15 @@ h6.cart-prev-description  {
   .cart-prev-remove-box:hover {
     cursor: pointer;
   }
+
+
+  @media screen and (min-width: 1500px) {
+   .middle   {
+    padding-bottom: 3px;
+    width: 100px;
+   
+   }
+
+
+
+}

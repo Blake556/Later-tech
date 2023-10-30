@@ -16,7 +16,7 @@
     margin-right: 65px;
 }
 
-.product-page-img {
+.product-page-img { 
     height: 500px;
     
    
@@ -59,6 +59,7 @@
 .product-page-desc-box h6 {
     padding: 10px 0px;
     line-height: 25px; 
+    text-indent: 20px; 
 }
 
 .product-page-buy-btn {
@@ -70,3 +71,33 @@
 .product-page-img :hover {
     transform: scale(1.1); /* Increase the scale for zoom effect */
   }
+
+
+
+  
+@media screen and (min-width: 1500px) {
+
+    .product-page-img-box  {
+        width: 900px;
+        margin-right: 65px;
+
+    }
+
+    .product-page-img { 
+        height: 700px;
+        
+       
+    }
+
+    .all-details {
+        margin-bottom: 30px;
+        
+    }
+
+    .product-page-desc-box h6 {
+       
+        line-height: 30px; 
+    }
+
+
+}

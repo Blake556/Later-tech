@@ -22,7 +22,7 @@ function Shop(props) {
         </div>
           <div className="collection-box col-3">
             <div className="shop-header">
-              <h3>Choose your <br /> collection</h3>
+              <h3>Choose your <br /> <span className="shop-header-collection"> collection </span></h3>
             </div>
           </div>
 
@@ -77,7 +77,7 @@ function Shop(props) {
         
         <div className="help-box col-6">
         <div className="d-flex justify-content-center">
-          <h3 className="help-header">Did you find what you were looking for?<br></br>Click here.</h3>
+          <h3 className="help-header">Did you find what you were looking for?<br></br> <span className="click-here-help"> Click here. </span> </h3>
           </div>
         </div>
       </div>

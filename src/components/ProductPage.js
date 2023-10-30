@@ -148,7 +148,7 @@ function ProductPage(props) {
             removeFromCart={props.removeFromCart}
             increaseQuanity={props.increaseQuanity}
             decreaseQuanity={props.decreaseQuanity}
-            totalCost={props.totalCost}
+            totalCost={props.totalCost} 
             /> 
         </div>
       </div>

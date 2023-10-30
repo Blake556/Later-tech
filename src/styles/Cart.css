@@ -8,13 +8,24 @@
     min-height: 100vh;
 }
 
+
+
+/************************************ PAY NOW SECTION  **********************************/
+
+
+
+.pay-now {
+    width: 575px;
+    
+}
+
 .divider {
     border-right: .5px solid rgb(178, 178, 178);
     margin: 0;
     padding: 0;
 }
 
-.shipping-row {
+.shipping-row { 
     border-bottom: .5px solid rgb(178, 178, 178);
     padding-top: 20px;
     margin-bottom: 10px;
@@ -64,7 +75,8 @@
 
 
 
-/* CART ITEM SECTION  */
+/************************************ CART ITEM SECTION  **********************************/
+
 .order-items-box {
     background-color: rgb(237, 237, 237);
     padding: 50px 0px 100px 35px;
@@ -74,7 +86,8 @@
 .inner-cart-detail-row {
     /* padding: 50px 50px 20px 50px; */
     position: relative;
-    width: 60%;
+    /* width: 60%; */
+    width: 400px;
     margin-bottom: 15px;
 }
 
@@ -130,7 +143,8 @@ p.cart-item-color  {
 
 
 .total-cart-detail-row {
-    width: 60%;
+    /* width: 60%; */
+     width: 400px;
     margin-top: 50px;
 }
 
@@ -151,7 +165,7 @@ p.cart-item-color  {
   
 
 
-/* ******************* Order Conf styles  ****************** */
+/* ******************************* Order Conf styles  ******************************** */
 
 .order-row h5 {
     margin-bottom: 15px;
@@ -244,3 +258,42 @@ button.continue-shop-btn {
 .cart-item-img-box {
 
 }
+
+
+
+
+@media screen and (min-width: 1500px) {
+
+    .pay-now {
+        width: 600px;
+        margin-left: 20%;
+    }
+
+    .order-row-container {
+        width: 600px;
+        margin-left: 20%;
+       
+    }
+
+    .order-con-map, .order-con-details-box { 
+       
+       
+    }
+ 
+    
+button.continue-shop-btn {
+    position: relative;
+    left: 85px;
+    border-radius: 5px;
+    padding: 15px;
+    float: right;
+    margin-top: 30px;
+}
+
+
+.order-items-box {
+   
+    padding-left: 60px;
+}
+
+ }
