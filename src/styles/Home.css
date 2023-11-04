@@ -8,16 +8,11 @@
 
 }
 
-.icon-link > .bi {
-  width: .75em;
-  height: .75em;
-}
-
 /*
  * Custom translucent site header
  */
 
-.site-header {
+ .site-header {
   background-color: rgba(0, 0, 0, .85);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
@@ -31,19 +26,62 @@
   text-decoration: none;
 }
 
+/* Category */
+
+.category {
+  position: relative;
+  text-decoration: none;
+  color: #333; /* Set your desired text color */
+}
+
+.category::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background-color: #333; /* Set your desired underline color */
+  height: 2px; /* Set your desired underline height */
+  transition: right 0.3s ease; /* Transition the right edge */
+}
+
+
+.category:hover::before {
+  right: 0; /* Gradually move the right edge to 0 (underlining the text) */
+}
+
+span.buy-shop {
+  font-weight: 500;
+}
+
+.pbd { 
+  background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+}
+
+
+
 /*
  * Dummy devices (replace them with your own or something else entirely!)
  */
 
-.product-device {
+ .product-device {
   position: absolute;
   right: 10%;
   bottom: -30%;
   width: 300px;
   height: 540px;
-  background-color: #333;
   border-radius: 21px;
   transform: rotate(30deg);
+  transition: all 0.8s; /* Add a transition for all properties with a 0.3s duration */
+}
+
+.product-device:hover {
+  width: 315px; /* Increase the width */
+  height: 555px; /* Increase the height */
+}
+
+.product-device:hover:before {
+  transform: rotate(25deg); /* Slightly adjust the rotation */
 }
 
 .product-device::before {
@@ -62,7 +100,7 @@
   right: auto;
   bottom: 0;
   left: 5%;
-  background-color: #e5e5e5;
+
 }
 .product-box {
     background-color: rgb(237, 237, 237);
@@ -73,6 +111,11 @@
    height: 300px; 
    border-radius: 21px 21px 0 0;
 }
+
+.buy-shop:hover {
+
+  color: black;
+}
 /*
  * Extra utilities
  */
@@ -80,6 +123,25 @@
 .flex-equal > * {
   flex: 1;
 }
+
+
+.carousel-box {
+  height: 700px;
+  background-color: rgb(237, 237, 237);
+  margin: 15px;
+}
+
+.carousel-item img {
+  height: 600px;
+  width: auto;
+}
+
+
+
+
+
+
+
 @media (min-width: 768px) {
   .flex-md-equal > * {
     flex: 1;

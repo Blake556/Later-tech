@@ -114,6 +114,9 @@ const grandTotal = formatNumberWithCommas(cartPlusTax) || 0
           setCartPreview={setCartPreview} 
           shoppingCart={shoppingCart}
           removeFromCart={removeFromCart} 
+          increaseQuanity={increaseQuanity}
+          decreaseQuanity={decreaseQuanity}
+          totalCost={totalCost}
         />
         <Routes>
        

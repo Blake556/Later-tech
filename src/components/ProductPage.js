@@ -1,5 +1,5 @@
 import '../styles/ProductPage.css';
-//import img from './../images/Apple/iphoneBlue-15-pro-front.png';
+// import img from './../images/Apple/iphoneBlue-15-pro-front.png';
 
 import CartPreview from './CartPreview'
 import React, { useState } from 'react';

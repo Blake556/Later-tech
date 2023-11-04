@@ -43,6 +43,9 @@ function Navbar(props) {
         setTrigger={props.setCartPreview}
         shoppingCart={props.shoppingCart}
         removeFromCart={props.removeFromCart}
+        increaseQuanity={props.increaseQuanity}
+        decreaseQuanity={props.decreaseQuanity}
+        totalCost={props.totalCost} 
         /> 
     </div>
   );
