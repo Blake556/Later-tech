@@ -4,11 +4,13 @@ import iPhone from "./../images/Apple/iPhone-home.png";
 import iPhone2 from "./../images/Apple/iPhone-home-f.png";
 import airpods from "./../images/Apple/Apple-AirPods-Pro.jpg";
 // import sTab from './../images/Samsung/Galaxy-tab.avif';
-import tradeIn from "./../images/Samsung/sTrade-in.png";
+import tradeIn from "./../images/Samsung/sTrade-in1.png";
 import mac from "./../images/Apple/Mac-Pro.png";
 // import tradeIn from './../images/Samsung/trade-in.png';
 import microsoft from "./../images/Microsoft/xbox1.png";
-
+import laptop from "./../images/Apple/Macbook-pro-front (1).png";
+import laptopRs from "./../images/Apple/macbook-prs.png";
+import laptopLs from "./../images/Apple/macbook-pls.png";
 
 function Home() {
   return (
@@ -36,7 +38,7 @@ function Home() {
       </div>
 
       <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-        <div class="bg-black product-box  text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        {/* <div class="bg-black product-box  text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
           <div class="my-3 py-3">
             <h2 class="display-5">Apple</h2>
             <p class="lead">Adaptive Audio. Now playing.</p>
@@ -48,49 +50,65 @@ function Home() {
               style={{ position: "relative", top: "-50px" }}
             />
           </div>
-          {/* bg-light */}
+         
+        </div> */}
+        <div class="bg-black product-box  me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+          <div class="my-3 p-3 text-white">
+            <h2 class="display-5 ad-box">Apple</h2>
+            <p class="lead">Adaptive Audio. Now playing.</p>
+          </div>
+          <div class="bg-body-tertiary my-3 py-3 mx-auto product d-flex justify-content-center">
+          <img
+              src={airpods}
+              height="500px"
+              style={{ position: "relative", top: "-50px" }}
+            />
+          </div>
         </div>
         <div class="product-box  me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
           <div class="my-3 p-3">
-            <h2 class="display-5">Shop Consoles</h2>
+            <h2 class="display-5 ad-box">Shop Consoles</h2>
             <p class="lead">
               Get the latest Galaxy tech that everyone’s talking about.
             </p>
           </div>
-          <div class=" mx-auto product">
+          <div class="bg-body-tertiary my-3 py-3 mx-auto product d-flex justify-content-center">
             <img
               src={microsoft}
-              height="700px"
+              height="675px"
               style={{ position: "relative", top: "-175px" }}
             />
           </div>
         </div>
       </div>
 
-      <div
-        class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3"
-        style={{ width: "100%" }}
-      >
-        <div
-          class="product-box bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"
-          style={{ width: "100%" }}
-        >
-          <div class="my-3 p-3">
-            <h2 class="display-5">Trade in</h2>
-            <p class="lead">Save on upgrade with a trade in.</p>
-          </div>
-          <img src={tradeIn} style={{ width: "110%" }} />
+      <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+          <div class=" product-box  text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 py-3">
+              <h2 class="display-5 ad-box">Trade in</h2>
+              <p class="lead">Save on upgrade with a trade in.</p>
+            </div>
+            <div class="bg-body-tertiary my-3 py-3 mx-auto product d-flex justify-content-center">
+              <img
+                src={tradeIn}
+                height="350px"
+                style={{ position: "relative", top: "-50px" }}
+              />
+            </div>
+          {/* bg-light */}
         </div>
 
+         
+
         <div class="product-box bg-black text-bg-primary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-          <div class="my-3 py-3">
-            <h2 class="display-5">Finance</h2>
+          <div class="my-3 py-3 text-white">
+            <h2 class="display-5 ad-box">Finance</h2>
             <p class="lead">Finance 24 months at 0% APR.</p>
           </div>
           <div class="bg-body-tertiary my-3 py-3 mx-auto product d-flex justify-content-center">
             <img
               src={mac}
-              height="450px"
+              height="350px"
               style={{ position: "relative", top: "-50px" }}
             />
           </div>
@@ -98,18 +116,20 @@ function Home() {
       </div>
 
       <div className="carousel-box bg-body-tertiary d-flex justify-content-center align-items-center">
-          <div className="left-windo ">
-            <img src='' height='300px'/>
-          </div>
-          <div className="center-window">
-            <img src={airpods}  height='300px'/>
-          </div>
-          <div className="right-window">
-            <img src='' height='300px'/>
-          </div>
-    </div>
+        <div className="left-window d-flex align-items-center">
+          <img src={laptopRs} height="300px" />
+        </div>
 
-    {/* <div className="carousel-box bg-body-tertiary d-flex justify-content-center align-items-center">
+        <div className="center-window d-flex align-items-center">
+          <img src={laptop} height="300px" />
+        </div>
+
+        <div className="right-window d-flex align-items-center">
+          <img src={laptopLs}  height="300px" />
+        </div>
+      </div>
+
+      {/* <div className="carousel-box bg-body-tertiary d-flex justify-content-center align-items-center">
       <div id="myCarousel" className="carousel slide" data-ride="carousel" data-interval="4000">
         <div className="carousel-inner">
           <div className="carousel-item active">
@@ -125,7 +145,6 @@ function Home() {
         </div>
       </div>
     </div> */}
-
     </div>
   );
 }
