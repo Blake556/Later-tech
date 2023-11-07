@@ -33,7 +33,7 @@ function Navbar(props) {
           {/* <span>Later Tech</span> */}
         </div>
         <div className="sc-box col-3 d-flex justify-content-end align-items-center">
-          <Link to="/Cart"> <FontAwesomeIcon icon={faMagnifyingGlass} className="sc"/> </Link>
+          <Link to=""> <FontAwesomeIcon icon={faMagnifyingGlass} className="sc"/> </Link>
         
          <FontAwesomeIcon onClick={() => props.setCartPreview(true)} icon={faCartShopping} className="sc activate-cp"/>
         </div>

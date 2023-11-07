@@ -64,7 +64,8 @@
 
 .product-page-buy-btn {
     border-radius: 15px;
-    padding: 12px 24px;
+    width: 55%;
+    padding: 12px 0px;
 }
 
 

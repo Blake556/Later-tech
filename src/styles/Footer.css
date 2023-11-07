@@ -13,7 +13,7 @@
 }
 
 .phone-number span {
-    color: rgb(67, 67, 67);
+    color: rgb(219, 219, 219);
     font-size: 14px;
     margin-left: 20px;
 }
@@ -27,6 +27,7 @@
     bottom: 0px;
     left: 113px;
     font-size: 2.5rem;
+   
   }
 
 .rights-reserved {
@@ -84,4 +85,12 @@
 .sign-up-field:active {
     background-color: black !important; /* Change the background color to black when the button is clicked */
     color: white !important; /* You can adjust the text color as needed */
+}
+
+
+
+@media screen and (min-width: 1500px) {
+    .arrow {
+        left: 47%;
+    }
 }

@@ -231,7 +231,7 @@ img.order-con-map-img {
     margin: 0;
 }
 
-
+ 
 .continue-shop-row {
     width: 575px;
     
@@ -243,7 +243,7 @@ img.order-con-map-img {
 button.continue-shop-btn {
     position: relative;
     left: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 15px;
     float: right;
     margin-top: 30px;
@@ -284,10 +284,11 @@ button.continue-shop-btn {
 button.continue-shop-btn {
     position: relative;
     left: 85px;
-    border-radius: 5px;
+   
     padding: 15px;
     float: right;
     margin-top: 30px;
+    margin-right: 13%;
 }
 
 

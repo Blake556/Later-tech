@@ -9,7 +9,7 @@ import {
 
 
 function Footer() {
-  return (
+  return ( 
     <div className="Footer d-flex align-items-center">
       <div className="row footer-row " >
         <div className="col-5 phone-number d-flex align-items-center">

@@ -1,8 +1,19 @@
 .Home {
     /* background-color: rgb(52, 52, 52); */
-    z-index: 2;
+    min-width: 1500px;
+    overflow-x: hidden;
     
+
 }
+
+.home-inner-box {
+  width: 100%;
+  max-width: 100vw; /* Set the maximum width to the viewport width */
+  overflow-x: hidden; /* Hide the horizontal overflow content */
+}
+
+
+
 
 .container {
   max-width: 960px;
@@ -29,13 +40,13 @@
 
 /* Category */
 
-.category {
+.buy-box {
   position: relative;
   text-decoration: none;
   color: #333; /* Set your desired text color */
 }
 
-.category::before {
+.buy-box::before {
   content: '';
   position: absolute;
   left: 0;
@@ -47,7 +58,7 @@
 }
 
 
-.category:hover::before {
+.buy-box:hover::before {
   right: 0; /* Gradually move the right edge to 0 (underlining the text) */
 }
 
@@ -94,7 +105,7 @@ span.buy-shop {
   content: "";
   background-color: rgba(255, 255, 255, .1);
   border-radius: 5px;
-}
+} 
 
 .product-device-2 {
   top: -25%;
@@ -113,13 +124,11 @@ span.buy-shop {
   
 }
 
-.buy-shop:hover {
+.buy-box:hover {
 
   color: black;
 }
-/*
- * Extra utilities
- */
+
 
 .flex-equal > * {
   flex: 1;
@@ -148,11 +157,7 @@ span.buy-shop {
 
 
 .carousel-box {
-  width: 100%;
-  max-width: 100%; /* Set the maximum width to the viewport width */
-  overflow-x: hidden; /* Hide the horizontal overflow content */
   height: 500px;
- 
   background-color: rgb(237, 237, 237);
   margin: 15px 0 50px 0;
   z-index: 1;
@@ -160,31 +165,32 @@ span.buy-shop {
 
 .center-window {
  
-  width: auto;
-  padding: 0 8%;
+  width: 50%;
+  
   /* margin: 20px; */
 }
 
 .left-window {
-  width: 100%;
+  width: 25%;
   height: 100%;
-  padding-right: 3%;
   border-right: 15px solid white;
- 
 }
 
-.left-window, .right-window img {
-
-z-index: 1;
-}
 .right-window {
-  width: 100%;
+  width: 25%;
   height: 100%;
-  padding-left: 3%;
   border-left: 15px solid white;
  
 
 }
+
+
+.home-bottom-header {
+  margin-bottom: 60px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5rem;
+}
+
 
 
 
