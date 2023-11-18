@@ -6,7 +6,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import {Link} from 'react-router-dom'
 import image from "../images/Headers/icon.png"
-import CartPreview from './CartPreview'
+import CartPreview from './CartPreview' 
+import SearchBar from './SearchBar'
+
 
 function Navbar(props) {
    
@@ -33,11 +35,15 @@ function Navbar(props) {
           {/* <span>Later Tech</span> */}
         </div>
         <div className="sc-box col-3 d-flex justify-content-end align-items-center">
-          <Link to=""> <FontAwesomeIcon icon={faMagnifyingGlass} className="sc"/> </Link>
+           <FontAwesomeIcon onClick={() => props.setSearchbar(true)} icon={faMagnifyingGlass} className="sc"/>
         
          <FontAwesomeIcon onClick={() => props.setCartPreview(true)} icon={faCartShopping} className="sc activate-cp"/>
         </div>
       </div>
+      <SearchBar 
+        searchTrigger={props.searchbar}
+        setSearchTrigger={props.setSearchbar}
+      />
       <CartPreview 
         trigger={props.cartPreview} 
         setTrigger={props.setCartPreview}
@@ -47,6 +53,7 @@ function Navbar(props) {
         decreaseQuanity={props.decreaseQuanity}
         totalCost={props.totalCost} 
         /> 
+     
     </div>
   );
 }

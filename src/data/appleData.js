@@ -29,6 +29,20 @@ import macTower1 from './../images/Apple/mac-pro-tower-front.png'
 import macTower2 from './../images/Apple/mac-pro-tower-side.png'
 
 
+let image1;
+let image2;
+
+try {
+  image1 = require('./../images/Samsung/1.1.png');
+  image2 = require('./../images/Samsung/2.png');
+} catch (error) {
+  
+  console.error("Error loading images:", error);
+ 
+  image1 = null;
+  image2 = null;
+}
+
 const apple = [
     {
         id: 0,

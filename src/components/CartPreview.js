@@ -14,7 +14,7 @@ function CartPreview(props) {
         <h4>Your order</h4>
         <button className="close-cart-preview" onClick={() => props.setTrigger(false)}>
           X
-        </button>
+        </button> 
       </div>
       <div className="cart-prev-shipping-box">
         <span className="cart-prev-shipping-header">This order qualifies for FREE shipping.</span>

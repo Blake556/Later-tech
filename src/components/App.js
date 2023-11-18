@@ -28,6 +28,8 @@ import accessoriesData from '../data/accessoriesData.js'
 
 function App() {
   const [cartPreview, setCartPreview ] = useState(false)
+  const [searchbar, setSearchbar ] = useState(false)
+ 
   //console.log(cartPreview)
   const [shoppingCart, setShoppingCart] = useState([])
   const [total, cartTotal] = useState()
@@ -112,6 +114,8 @@ const grandTotal = formatNumberWithCommas(cartPlusTax) || 0
         <Navbar 
           cartPreview={cartPreview} 
           setCartPreview={setCartPreview} 
+          searchbar={searchbar}
+          setSearchbar={setSearchbar}
           shoppingCart={shoppingCart}
           removeFromCart={removeFromCart} 
           increaseQuanity={increaseQuanity}
@@ -131,7 +135,7 @@ const grandTotal = formatNumberWithCommas(cartPlusTax) || 0
           <Route path="/Accessories" element={<Accessories accessoriesData={accessoriesData} />} />
           <Route path="/ProductPage/:id/:category" element={
             <ProductPage 
-              cartPreview={cartPreview} 
+              cartPreview={cartPreview}  
               setCartPreview={setCartPreview} 
               addToCart={addToCart} 
               shoppingCart={shoppingCart}

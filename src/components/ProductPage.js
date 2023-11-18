@@ -2,6 +2,7 @@ import '../styles/ProductPage.css';
 // import img from './../images/Apple/iphoneBlue-15-pro-front.png';
 
 import CartPreview from './CartPreview'
+import SearchBar from './SearchBar'
 import React, { useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 
@@ -137,7 +138,7 @@ function ProductPage(props) {
               props.setCartPreview(true); // Handle the cart preview toggle
               handleAddToCart(); // Handle adding to the cart
              
-          }}>
+          }}> 
             Buy
           </button>
           </div>
@@ -150,6 +151,9 @@ function ProductPage(props) {
             decreaseQuanity={props.decreaseQuanity}
             totalCost={props.totalCost} 
             /> 
+
+<SearchBar category={category} searchTrigger={false}  />
+
         </div>
       </div>
     </div>
