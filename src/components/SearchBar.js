@@ -1,5 +1,7 @@
 import '../styles/SearchBar.css';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
@@ -45,29 +47,49 @@ console.log(searchResults)
     setSearchResults(results);
   };
 
+
+
+
+
   return props.searchTrigger ? ( 
     <div className={`Search-bar ${props.trigger ? 'search-preview-show' : ''}`}>
-      <div className="search-box-header d-flex">
-        <h4>Search</h4>
+      <div className="search-box-header d-flex align-items-center">
+        
+        <h5 className="search-title">search</h5>
+       
         <button className="close-search-popup" onClick={() => props.setSearchTrigger(false)}>
           X
         </button> 
       </div>
       <div className="search-box-main">
-        <div className="searchbar-box">
-          <input type="text" value={searchTerm} onChange={handleSearch} />
-          <FontAwesomeIcon icon={faMagnifyingGlass} className="sc" />
+        <div className="search-bar-box">
+          <input 
+            type="text" 
+            value={searchTerm}
+            onChange={handleSearch} 
+            placeholder="Enter a keyword"
+        />
+          <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
         </div>
         <div className="search-results">
         { searchResults.length > 0 ? ( searchResults.map((result) => (
+
+            // Link Allows when searchResult gets clicked on user goes to ProductPage with only that product
+            <Link to={`/ProductPage/${result.id}/${result.category}`} onClick={() => props.setSearchTrigger(false)} className="row d-flex justify-content-center category">
             <div key={result.id}>
-                <div className="box">  
-                    <img src={result.img1} height='50px'/>
-                    <p>{result.name}</p>
+                <div className="box d-flex"> 
+                <div className="search-img-box d-flex justify-content-center">  
+                    <img src={result.img1} height='115px'/>
+                </div>
+                 <div className="search-name box d-flex align-items-center">
+                    <p className="result-name">{result.name}</p>
+                </div>
                 </div> 
             </div>
+            </Link>
+
           ))) :(
-          <h2>No search result found</h2> )}
+          <p className="no-results-msg">No search result found</p> )}
         </div>
       </div>
     </div>
