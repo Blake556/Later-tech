@@ -122,6 +122,7 @@ const grandTotal = formatNumberWithCommas(cartPlusTax) || 0
           decreaseQuanity={decreaseQuanity}
           totalCost={totalCost}
         />
+        <div className="App-body">
         <Routes>
        
           <Route path="" element={ <Home  to="/Home"/>} />
@@ -160,6 +161,7 @@ const grandTotal = formatNumberWithCommas(cartPlusTax) || 0
           />}/>
 
         </Routes>
+        </div>
         <Footer />
       </div>
     </Router>
