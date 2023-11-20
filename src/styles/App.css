@@ -2,14 +2,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-   /* this is the line that is cuasing a gaop fixed one problem started another */
+  
  
 }
 
 body {
  
   width: 100%;
-  max-width: 100%; /* Set the maximum width to the viewport width */
+  max-width: 100%; 
   overflow-x: hidden; 
 } 
 

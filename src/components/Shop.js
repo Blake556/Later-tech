@@ -1,6 +1,7 @@
 import '../styles/Shop.css';
 import { Link } from 'react-router-dom';
 import titanium from '../images/Headers/Titanium.jpeg'
+import SearchBar from './SearchBar'
 
 
 function Shop(props) {
@@ -11,9 +12,6 @@ function Shop(props) {
   const Google =shopData[3].img;
   const Windows = shopData[4].img;
   
-  
-
-
   return (
     <div className="Shop">
       <div className="row">
@@ -77,14 +75,18 @@ function Shop(props) {
         
         <div className="help-box col-6">
         <div className="d-flex justify-content-center">
-          <h3 className="help-header">Did you find what you were looking for?<br></br> <span className="click-here-help"> Click here. </span> </h3>
+          <h3 className="help-header">Did you find what you were looking for?
+            <br></br> 
+            <span className="click-here-help" onClick={() => {props.setSearchbar(true);}}>
+ Click here. 
+            </span> 
+          </h3>
           </div>
         </div>
       </div>
-
+      
    </div>
-  );
+  ) 
 }
 
 export default Shop;
-

@@ -109,7 +109,7 @@ const grandTotal = formatNumberWithCommas(cartPlusTax) || 0
 
   return (
     <Router>
-<div className="App" style={{  backgroundColor: cartPreview ? 'rgba(0, 0, 0, .8)' : '' }}>
+<div className="App" style={{  backgroundColor: cartPreview || searchbar  ? 'rgba(0, 0, 0, .8)' : '' }}>
 
         <Navbar 
           cartPreview={cartPreview} 
@@ -127,7 +127,12 @@ const grandTotal = formatNumberWithCommas(cartPlusTax) || 0
           <Route path="" element={ <Home  to="/Home"/>} />
           <Route path="/Home" element={<Home />} />
           <Route path="/About" element={<About />} />
-          <Route path="/Shop" element={<Shop shopData={shopData} />} />
+          <Route path="/Shop" element={
+            <Shop 
+              shopData={shopData} 
+              searchbar={searchbar}
+              setSearchbar={setSearchbar}
+              />} />
           <Route path="/Apple" element={<Apple appleData={appleData} />} />
           <Route path="/Samsung" element={<Samsung samsungData={samsungData} />} />
           <Route path="/Google" element={<Google googleData={googleData} />} />

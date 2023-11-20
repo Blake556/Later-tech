@@ -13,19 +13,6 @@ import tv2 from  './../images/Samsung/tv2.png'
 import monitor1 from './../images/Samsung/monitor1.png'
 import monitor2 from './../images/Samsung/monitor2.png'
 
-let image1;
-let image2;
-
-try {
-  image1 = require('./../images/Samsung/1.1.png');
-  image2 = require('./../images/Samsung/2.png');
-} catch (error) {
-  // Handle the error, e.g., log a message or set default values
-  console.error("Error loading images:", error);
-  // Provide default values or set them to null
-  image1 = null;
-  image2 = null;
-}
 
 const samsungData = [
     {

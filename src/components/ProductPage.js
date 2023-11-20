@@ -20,10 +20,6 @@ function ProductPage(props) {
   // *****************   CART POPUP STATE   ********************* //
   const [isHovered, setIsHovered] = useState(true);
 
-  // thought i would neen btnclick state in productpage but itseems i do not
-  //const [btnClicked, setBtnClicked] = useState(false)
-  // console.log(props.formattedCartTotalCost)
-
   // const totalCost = props.calculateCartTotalCost(props.shoppingCart);
 
 
@@ -50,7 +46,6 @@ function ProductPage(props) {
       color: product.color,
       price: product.price,
     };
-
     // console.log(productData)
     props.addToCart(productData);
     //setBtnClicked(true)
@@ -59,9 +54,6 @@ function ProductPage(props) {
   function passRemoveCartF(item) {
    
   }
-  
-
-
 
   let productData;
 
@@ -85,22 +77,14 @@ function ProductPage(props) {
       productData = null;
   }
 
-
-  // Find the product by 'id' in the selected category's data
   const product = productData.find((product) => product.id === Number(id));
-
 
   //console.log(appleData[0].imgSd)
   //console.log(product.id, product.img1, product.imgSd, product.name);
   
-
-
-
-
   const imgSource = isHovered ? product.img1 : product.img2;
 
   if (!product) {
-    // Handle the case when the product with the given id is not found
     return <div>Product not found</div>;
   }
 
@@ -151,9 +135,6 @@ function ProductPage(props) {
             decreaseQuanity={props.decreaseQuanity}
             totalCost={props.totalCost} 
             /> 
-
-<SearchBar category={category} searchTrigger={false}  />
-
         </div>
       </div>
     </div>

@@ -8,8 +8,8 @@
 
 .home-inner-box {
   width: 100%;
-  max-width: 100vw; /* Set the maximum width to the viewport width */
-  overflow-x: hidden; /* Hide the horizontal overflow content */
+  max-width: 100vw; 
+  overflow-x: hidden; 
 }
 
 
@@ -43,7 +43,7 @@
 .buy-box {
   position: relative;
   text-decoration: none;
-  color: #333; /* Set your desired text color */
+  color: #333; 
 }
 
 .buy-box::before {
@@ -52,14 +52,13 @@
   left: 0;
   right: 100%;
   bottom: 0;
-  background-color: #333; /* Set your desired underline color */
-  height: 2px; /* Set your desired underline height */
-  transition: right 0.3s ease; /* Transition the right edge */
+  background-color: #333; 
+  height: 2px; 
+  transition: right 0.3s ease; 
 }
 
-
 .buy-box:hover::before {
-  right: 0; /* Gradually move the right edge to 0 (underlining the text) */
+  right: 0; 
 }
 
 span.buy-shop {
@@ -73,7 +72,7 @@ span.buy-shop {
 
 
 /*
- * Dummy devices (replace them with your own or something else entirely!)
+ * Dummy devices 
  */
 
  .product-device {
@@ -84,16 +83,16 @@ span.buy-shop {
   height: 540px;
   border-radius: 21px;
   transform: rotate(30deg);
-  transition: all 0.8s; /* Add a transition for all properties with a 0.3s duration */
+  transition: all 0.8s; 
 }
 
 .product-device:hover {
-  width: 315px; /* Increase the width */
-  height: 555px; /* Increase the height */
+  width: 315px; 
+  height: 555px; 
 }
 
 .product-device:hover:before {
-  transform: rotate(25deg); /* Slightly adjust the rotation */
+  transform: rotate(25deg); 
 }
 
 .product-device::before {
@@ -150,12 +149,6 @@ span.buy-shop {
 
 
 
-
-
-
-
-
-
 .carousel-box {
   height: 500px;
   background-color: rgb(237, 237, 237);
@@ -190,11 +183,6 @@ span.buy-shop {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 3.5rem;
 }
-
-
-
-
-
 
 
 

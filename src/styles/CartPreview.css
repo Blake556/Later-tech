@@ -1,21 +1,20 @@
 .PopUpCart {
     position: fixed;
     top: 0;
-    right: 0; /* Start with the element outside the viewport */
+    right: 0;
     /* width: 35%; */
     width: 500px;
     height: 100vh;
     background-color:white;
     padding: 20px;
-    transition: right 0.5s; /* Change the duration to 0.5 seconds */
+    transition: right 0.5s; 
 
   }
 
-/* Rest of your styles remain the same */
 
-/* Add a class to animate the CartPreview when it's triggered */
+
 .cart-preview-show {
-    right: 0; /* Move the element to the right to slide it in */
+    right: 0; 
     z-index: 2
 }
 
@@ -55,20 +54,13 @@
 .cart-prev-all-items-box {
   margin: 15px 0 50px;
   padding: 20px 0 60px 0px;
-  /* margin-bottom: 20px; */
+ 
   max-height: 75%; 
-  overflow-y: auto; /* Enable vertical scrolling */
-  overflow-x: hidden; /* Disable horizontal scrolling */
+  overflow-y: auto; 
+  overflow-x: hidden; 
   /* background-color: bisque; */
   
 }
-
-/* .cart-prev-item-box {
-    margin-top: 5px;
-    
-    overflow: auto;
-   
-} */
 
 .cart-prev-description-box  {
   line-height: .8;
@@ -138,7 +130,7 @@ h6.cart-prev-description  {
 
 .cart-preview-bottom-box {
   position: absolute;
-  bottom: 10px; /* Stick it to the bottom */
+  bottom: 10px;
   width: 95%;
   padding-top: 20px;
   margin-bottom: 20px;
@@ -162,8 +154,8 @@ h6.cart-prev-description  {
 .cart-btn-box {
   right: 20px;
   /* margin: 20px 0; */
-  display: flex; /* Create a flex container */
-  justify-content: center; /* Center horizontally */
+  display: flex; 
+  justify-content: center;
 }
 
 .cart-btn {
@@ -171,11 +163,11 @@ h6.cart-prev-description  {
   right: 8px;
   background-color: black;
   color: white;
-  width: 96%; /* Set a specific width */
+  width: 96%; 
   height: 50px;
   text-align: center;
  
-  margin: auto; /* Center both horizontally and vertically */
+  margin: auto; 
 }
 
 

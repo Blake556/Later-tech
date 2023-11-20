@@ -1,4 +1,3 @@
-// import '../styles/Apple.css';
 import Product from './Product'
 import { Link } from 'react-router-dom';
 import { useState } from "react";

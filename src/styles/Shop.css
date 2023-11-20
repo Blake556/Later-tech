@@ -156,7 +156,7 @@ img.shop-main-image {
   text-align: center;
   font-weight: 700;
   position: relative;
-  overflow: hidden; /* Hide the initial underline */
+  overflow: hidden; 
 }
 
 .help-header span {
@@ -169,14 +169,14 @@ img.shop-main-image {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 0; /* Start with no width */
+  width: 0; 
   height: 2.5px;
   background-color: #333;
-  transition: width 0.3s ease; /* Gradually increase the width */
+  transition: width 0.3s ease; 
 }
 
 .help-box:hover .help-header span::before {
-  width: 100%; /* Increase the width to 100% when help-box is hovered */
+  width: 100%;
 }
 
 
@@ -185,16 +185,13 @@ img.shop-main-image {
 
 .shop-header-collection {
   position: relative;
-  left: 0px; /* Start with no left offset */
-  transition: left 0.3s ease; /* Add a transition effect to the left property */
+  left: 0px; 
+  transition: left 0.3s ease; 
 }
 
-.shop-header:hover .shop-header-collection {
-  /* left: 200px;  */
-}
 
 .collection-box:hover .shop-header:hover .shop-header-collection {
-  left: -10px; /* Prevent moving back to the right when entering shop-header */
+  left: -10px; 
 }
 
 

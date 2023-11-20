@@ -3,10 +3,8 @@ import { Link } from "react-router-dom";
 import iPhone from "./../images/Apple/iPhone-home.png";
 import iPhone2 from "./../images/Apple/iPhone-home-f.png";
 import airpods from "./../images/Apple/Apple-AirPods-Pro.jpg";
-// import sTab from './../images/Samsung/Galaxy-tab.avif';
 import tradeIn from "./../images/Samsung/sTrade-in1.png";
 import mac from "./../images/Apple/Mac-Pro.png";
-// import tradeIn from './../images/Samsung/trade-in.png';
 import microsoft from "./../images/Microsoft/xbox1.png";
 import laptop from "./../images/Apple/Macbook-pro-front (1).png";
 import laptopRs from "./../images/Apple/macbook-prs.png";
@@ -39,20 +37,6 @@ function Home() {
         </div>
 
         <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-          {/* <div class="bg-black product-box  text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 py-3">
-              <h2 class="display-5">Apple</h2>
-              <p class="lead">Adaptive Audio. Now playing.</p>
-            </div>
-            <div class="bg-body-tertiary my-3 py-3 mx-auto product d-flex justify-content-center">
-              <img
-                src={airpods}
-                height="500px"
-                style={{ position: "relative", top: "-50px" }}
-              />
-            </div>
-          
-          </div> */}
           <div class="bg-black product-box  me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
             <div class="my-3 p-3 text-white">
               <h2 class="display-5 ad-box">Apple</h2>
@@ -130,23 +114,6 @@ function Home() {
             <img src={laptopLs} height="300px" />
           </div>
         </div>
-
-        {/* <div className="carousel-box bg-body-tertiary d-flex justify-content-center align-items-center">
-        <div id="myCarousel" className="carousel slide" data-ride="carousel" data-interval="4000">
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img src={ctv} alt="First slide" height='300px'/>
-            </div>
-            <div className="carousel-item">
-              <img src={airpods} alt="Second slide"  height='300px'/>
-            </div>
-            <div className="carousel-item">
-              <img src={tradeIn} alt="Second slide"  height='300px'/>
-            </div>
-            
-          </div>
-        </div>
-      </div> */}
       </div>
     </div>
   );
