@@ -13,12 +13,12 @@ import SearchBar from './SearchBar'
 function Navbar(props) {
    
   return (
-    <div className="Navbar ">
+    <div className="Navbar "  style={{  backgroundColor: props.cartPreview || props.searchbar  ? 'rgba(49, 49, 49)' : ''}}>
       <div className="shipping-box row text-center">
         <span className='shipping'>Fast Free Shipping in US</span>
       </div>
       <div className="nav-main row d-flex">
-        <div className="links-box col-3 d-flex align-items-center">
+        <div className="links-box col-3 d-flex align-items-center"> 
         <div className="link-box">
           <Link to="/Home"> <span className='link'>Home</span> </Link> 
         </div>

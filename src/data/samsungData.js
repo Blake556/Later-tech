@@ -22,7 +22,7 @@ const samsungData = [
         img2: Galaxy232,
         name: 'Samsung Galaxy s23+',
         color: 'Carbon black',
-        description: 'Choose your device',
+        description: 'Meet Galaxy S23+, the phone takes you out of the everyday and into the epic. Life doesn’t wait for the perfect lighting, but with Nightography, you are always ready to seize the moment and snap memories like a pro.',
         storage: '256GB',
         price: '$999.99'
     },

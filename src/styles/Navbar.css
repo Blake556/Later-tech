@@ -1,11 +1,12 @@
 .Navbar {
     border-bottom: .5px solid rgb(178, 178, 178);
     background-color: white;
+    min-width: 1400px;
     width: 100%;
-    /* height: 112px; */
+    height: 112px; 
     position: fixed;
     z-index: 2;
-    
+   
 }
 
 .shipping-box {
@@ -50,6 +51,11 @@
 
 .logo {
     height: 80px;
+}
+
+.sc-box {
+    position: relative;
+    left: 55px;
 }
 
 .sc {
